@@ -1,11 +1,3 @@
-![image-20231020152720026](C:\Users\user\AppData\Roaming\Typora\typora-user-images\image-20231020152720026.png)
-
-![image-20231020152821180](C:\Users\user\AppData\Roaming\Typora\typora-user-images\image-20231020152821180.png)
-
-
-
-
-
 `addHeader()`와 `setHeader()`는 `HttpServletResponse` 객체에서 사용할 수 있는 두 가지 메서드로, 둘 다 HTTP 응답 헤더를 설정하는 데 사용됩니다. 그러나 둘 사이에 중요한 차이점이 있습니다:
 
 1. **`addHeader(String name, String value)`**:

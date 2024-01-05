@@ -12,7 +12,7 @@
 
 ```
 DEFAULT
-- mysql: epeatable Read
+- mysql: repeatable Read
 - oracle: read committed
 - mongodb: read uncommitted
 ```

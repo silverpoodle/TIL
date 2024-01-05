@@ -11,3 +11,5 @@
 - request : 웹 요청이 들어오고 나갈 때까지 유지되는 스코프이다.
 - session : 웹 세션이 생성되고 종료될 때까지 유지되는 스코프이다.
 - application : 웹의 서블릿 컨텍스트와 같은 범위로 유지되는 스코프이다.
+
+![Spring Bean Scopes Example – Developers Corner – Java Web Development  Tutorials](https://avaldes.com/wp-content/uploads/2012/01/bean_scope.png)

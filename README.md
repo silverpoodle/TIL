@@ -63,3 +63,11 @@
 - cs
 - database
 
+
+
+---
+
+### commit
+
+- one commit a day
+- commit -m "DATE"

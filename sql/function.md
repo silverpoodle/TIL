@@ -58,5 +58,27 @@ right('MySQL is an open source relational database management system', 6); -- sy
 ### Date
 
 - NOW()
+
 - SYSDATE()
+
 - CURRENT_TIMESTAMP()
+
+- PUBLISHED_DATE
+
+  ```sql
+  	2021-10-24 00:00:00
+  ```
+
+- DATE_FORMAT(PUBLISHED_DATE, '%Y-%m-%d')
+
+  ```sql
+  	2021-10-24
+  ```
+
+- DATE_FORMAT(PUBLISHED_DATE, '%y-%M-%D')
+
+  ```sql
+  	21-October-24th
+  ```
+
+  

@@ -81,4 +81,17 @@ right('MySQL is an open source relational database management system', 6); -- sy
   	21-October-24th
   ```
 
+
+
+
+
+
+### ETC
+
+- IFNULL(TLNO, 'NONE')
+
+  ```sql
+  TLNO 가 null 일 시 'NONE' 으로 출력
+  ```
+
   

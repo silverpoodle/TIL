@@ -43,6 +43,7 @@ int i = Integer.parseInt(br.readLine()); // 다른 타입으로 입력 받을 �
 StringTokenizer st = new StringTokenizer(s); //StringTokenizer인자값에 입력 문자열 넣음
 int a = Integer.parseInt(st.nextToken()); //첫번째 호출
 int b = Integer.parseInt(st.nextToken()); //두번째 호출
+st.hasMoreTokens() //개행 전까지
 
 //2.String.split(" ") 사용
 String array[] = s.split(" "); //공백마다 데이터 끊어서 배열에 넣음

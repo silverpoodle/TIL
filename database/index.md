@@ -1,6 +1,8 @@
 ### Index
 
-`데이터베이스의 테이블에 대한 검색 속도를 향상시켜주는 자료구조`
+**`데이터베이스의 테이블에 대한 검색 속도를 향상시켜주는 자료구조`**
+
+**` => 레코드에 대한 검색 속도를 높이기 위해 물리적 저장 위치를 별도로 기록함`**
 
 <img src="https://user-images.githubusercontent.com/38887077/76482821-4ec64780-6450-11ea-862e-da506f5cdae2.png" alt="How Indexing Works in NebulaGraph" style="zoom: 33%;" />
 
@@ -21,12 +23,9 @@ Cons
 
 
 
+#### Hash Table
 
+#### B+ Tree
 
-#### 구현방식
+<img src="https://media.geeksforgeeks.org/wp-content/uploads/Btree.jpg" alt="img" style="zoom:67%;" />
 
-1. Hash Table
-
-2. B+ Tree
-
-   

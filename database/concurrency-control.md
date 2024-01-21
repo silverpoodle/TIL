@@ -148,7 +148,7 @@
    두 개 이상의 작업이 서로 상대방의 작업이 끝나기 만을 기다리고 있기 때문에 결과적으로 아무것도 완료되지 못하는 상태
    -- 예시: 두 개의 데이터 항목 A, B
    -- T1: A exclusive lock
-   -- T2: B shared lock   ->   서로 다른 데이터에 대한 락, 문제 없음
+   -- T2: B shared  lock   ->   서로 다른 데이터에 대한 락, 문제 없음
    
    -- T2: A shared lock   -> T1 이 unlock 하기 전까지 대기
    -- T1: B exclusive lock   ->   T2 가 unlock 하기 전까지 대기

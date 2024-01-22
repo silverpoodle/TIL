@@ -10,7 +10,7 @@
 테이블 R 에 속한 모든 도메인이 원자값(atomic value) 만으로 구성되어 있는 경우
 ```
 
-<img src="{{site.url}}/image-20240119225151315.png" alt="image-20240119225151315" style="zoom:50%;" />
+<img src="{{site.url}}\image-20240119225151315.png" alt="image-20240119225151315" style="zoom:50%;" />
 
 
 
@@ -23,7 +23,7 @@
 
 
 
-<img src="{{site.url}}/image-20240119230154978.png" alt="image-20240119230154978" style="zoom:50%;" />
+<img src="{{site.url}}\image-20240119230154978.png" alt="image-20240119230154978" style="zoom:50%;" />
 
 => 기본키가 '고객ID'와 '상품코드' 속성으로 구성되어있을 때 '제품명'은 기본키 중 '제품코드'만 알아도 식별 가능
 
@@ -44,7 +44,7 @@
 
 
 
-<img src="C:\Users\jungi\AppData\Roaming\Typora\typora-user-images\image-20240119231103247.png" alt="image-20240119231103247" style="zoom:50%;" />
+<img src="{{site.url}}\image-20240119231103247.png" alt="image-20240119231103247" style="zoom:50%;" />
 
 => '제품코드' 로 '소분류' 를 알 수 있다.
 
@@ -65,7 +65,7 @@
 
 
 
-<img src="{{site.url}}/image-20240119232304769.png" alt="image-20240119232304769" style="zoom:50%;" />
+<img src="{{site.url}}\image-20240119232304769.png" alt="image-20240119232304769" style="zoom:50%;" />
 
 => (학생, 과목) -> 교수  &  교수 -> 과목
 
@@ -73,7 +73,7 @@
 
 
 
-<img src="C:\Users\jungi\AppData\Roaming\Typora\typora-user-images\image-20240119233957133.png" alt="image-20240119233957133" style="zoom:50%;" />
+<img src="{{site.url}\image-20240119233957133.png" alt="image-20240119233957133" style="zoom:50%;" />
 
 => 학생 / 교수 (함수적 종속x) , 교수 -> 과목
 

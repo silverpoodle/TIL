@@ -10,7 +10,11 @@
 테이블 R 에 속한 모든 도메인이 원자값(atomic value) 만으로 구성되어 있는 경우
 ```
 
+<<<<<<< HEAD
 <img src="https://blog.kakaocdn.net/dn/JnmTM/btsDQSQuOWY/UkAKSQYHoU46ce6Kl0epoK/img.png" alt="img" style="zoom:60%;" />
+=======
+<img src="{{site.url}}\image-20240119225151315.png" alt="image-20240119225151315" style="zoom:50%;" />
+>>>>>>> f192f3e6a946abc6f0c06c050d151193b7371de3
 
 
 
@@ -23,7 +27,11 @@
 
 
 
+<<<<<<< HEAD
 <img src="https://blog.kakaocdn.net/dn/BsRIu/btsDLu3UxiK/GZTt4bCLRDi6W1V898g7QK/img.png" alt="img" style="zoom:67%;" />
+=======
+<img src="{{site.url}}\image-20240119230154978.png" alt="image-20240119230154978" style="zoom:50%;" />
+>>>>>>> f192f3e6a946abc6f0c06c050d151193b7371de3
 
 => 기본키가 '고객ID'와 '상품코드' 속성으로 구성되어있을 때 '제품명'은 기본키 중 '제품코드'만 알아도 식별 가능
 
@@ -44,7 +52,11 @@
 
 
 
+<<<<<<< HEAD
 <img src="https://blog.kakaocdn.net/dn/yrLa2/btsDQ2ZHQeC/yjkzeKZjrhCQT64kGdOq8K/img.png" alt="img" style="zoom:67%;" />
+=======
+<img src="{{site.url}}\image-20240119231103247.png" alt="image-20240119231103247" style="zoom:50%;" />
+>>>>>>> f192f3e6a946abc6f0c06c050d151193b7371de3
 
 => '제품코드' 로 '소분류' 를 알 수 있다.
 
@@ -65,7 +77,11 @@
 
 
 
+<<<<<<< HEAD
 <img src="https://blog.kakaocdn.net/dn/byzQUg/btsDRLi7xl9/yRPsHvVtwCW3kIzR5bMUF1/img.png" alt="img" style="zoom:60%;" />
+=======
+<img src="{{site.url}}\image-20240119232304769.png" alt="image-20240119232304769" style="zoom:50%;" />
+>>>>>>> f192f3e6a946abc6f0c06c050d151193b7371de3
 
 => (학생, 과목) -> 교수  &  교수 -> 과목
 
@@ -73,7 +89,11 @@
 
 
 
+<<<<<<< HEAD
 <img src="https://blog.kakaocdn.net/dn/Tb6d2/btsDUJx4yxK/CyMSzLGFKVXUkqhCNGyvj1/img.png" alt="img" style="zoom:67%;" />
+=======
+<img src="{{site.url}\image-20240119233957133.png" alt="image-20240119233957133" style="zoom:50%;" />
+>>>>>>> f192f3e6a946abc6f0c06c050d151193b7371de3
 
 => 학생 / 교수 (함수적 종속x) , 교수 -> 과목
 

@@ -4,9 +4,9 @@
 
 **ISO(International Standardization Organization)에서 개발한 컴퓨터 네트워크 프로토콜 디자인과 통신을 계층으로 나누어 설명한 개방형 시스템 상호 연결 모델**
 
-> 프로토콜: 
+> **프로토콜**: **동일한 계층 간** 통신을 위해 **미리 정의된** 약속
 >
-> 개방형 시스템: 다른 시스템과의 상호 작용이나 통신을 위해 열려 있는 시스템
+> **개방형 시스템**: 다른 시스템과의 상호 작용이나 통신을 위해 열려 있는 시스템
 
 
 
@@ -255,3 +255,10 @@
   - MAP (Manufacturing Automation Protocol):
     - 제조업 자동화를 위한 표준 프로토콜로, 제조 공정에서 각종 장치들 간의 통신을 지원
 
+
+
+
+
+#### 헤더 추가/제거 과정
+
+![image-20240127213342206](C:\Users\jungi\AppData\Roaming\Typora\typora-user-images\image-20240127213342206.png)

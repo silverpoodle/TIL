@@ -1,4 +1,4 @@
-<img src="https://private-user-images.githubusercontent.com/88484476/301835179-ca6e6913-d1c3-47a2-be69-4ac28d5b5947.png?jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3MDY4NzUxNTUsIm5iZiI6MTcwNjg3NDg1NSwicGF0aCI6Ii84ODQ4NDQ3Ni8zMDE4MzUxNzktY2E2ZTY5MTMtZDFjMy00N2EyLWJlNjktNGFjMjhkNWI1OTQ3LnBuZz9YLUFtei1BbGdvcml0aG09QVdTNC1ITUFDLVNIQTI1NiZYLUFtei1DcmVkZW50aWFsPUFLSUFWQ09EWUxTQTUzUFFLNFpBJTJGMjAyNDAyMDIlMkZ1cy1lYXN0LTElMkZzMyUyRmF3czRfcmVxdWVzdCZYLUFtei1EYXRlPTIwMjQwMjAyVDExNTQxNVomWC1BbXotRXhwaXJlcz0zMDAmWC1BbXotU2lnbmF0dXJlPTA5ZmExNjE5NDFkNTlmNjY5NGU3Nzc5Mzk5Yjk5OThhYWU0YjRmYzdkZTQ3ZDFmNGUwOTlmZWEyZDNjZjA5ZjcmWC1BbXotU2lnbmVkSGVhZGVycz1ob3N0JmFjdG9yX2lkPTAma2V5X2lkPTAmcmVwb19pZD0wIn0.CEtc2a_ha7qUsul4CXHisId_LDSV8cA4yEq8pFYUm98" alt="image" style="zoom:50%;" />
+<img src="https://suhwan.dev/images/jpa_hibernate_repository/overall_design.png" alt="JPA, Hibernate, 그리고 Spring Data JPA의 차이점" style="zoom:30%;" />
 
 
 
@@ -11,23 +11,98 @@
 
 
 
+#### ORM(Object Relationship Mapping)
+
+![ORM Tool](https://media.geeksforgeeks.org/wp-content/uploads/20230619125144/Sender2.png)
+
+=> 객체와 DB 를 이어주는!! 고런 역할
+
+
+
+
+
+#### 패러다임 불일치 문제
+
+자바의 ***객체지향***과 데이터베이스의 ***관계지향***. 즉, 지향하는 바가 다르기 때문에 발생하는 문제!
+
+```java
+public class Student {
+    private Long id;
+    private String name;
+    private List<Course> courses;
+}
+// Student 클래스는 Course 클래스와 관계
+```
+
+
+
+```sql
+CREATE TABLE student (
+    id BIGINT PRIMARY KEY,
+    name VARCHAR(255)
+);
+
+CREATE TABLE course (
+    id BIGINT PRIMARY KEY,
+    name VARCHAR(255),
+    student_id BIGINT REFERENCES student(id)
+);
+-- 이러한 관계를 표현하기 위해 외래 키 등을 사용
+```
+
+
+
+
+
+#### 영속성 컨텍스트(persistence context)
+
+= **엔티티를 영구 저장하는 환경**
+
+<img src="https://images.velog.io/images/minsuk/post/176d6f71-d488-43ba-8385-4d4de4880d9a/%EC%BA%A1%EC%B2%98.PNG" alt="JPA(영속성 컨텍스트)" style="zoom:80%;" />
+
+
+
+
+
 
 
 ### JDBC(Java Database Connectivity) 
 
 **데이터베이스와 통신하기 위한 API,  데이터베이스의 종류에 상관없이 똑같은 코드**
 
+<img src="https://media.geeksforgeeks.org/wp-content/uploads/20200229213833/Architecture-of-JDBC2.jpg" alt="Introduction to JDBC (Java Database Connectivity) - GeeksforGeeks" style="zoom: 50%;" />
 
-
-JDBC API는 설정한 데이터베이스에 맞는 드라이버를 사용하여 데이터베이스에 접근하기 때문이다.
-
-즉, JDBC는 인터페이스이고 구현한 것은 각 데이터베이스에 맞는 드라이버들이다.
-
-
+JDBC API는 설정한 데이터베이스에 맞는 드라이버를 사용하여 데이터베이스에 접근
+즉, JDBC는 인터페이스이고 구현한 것은 각 데이터베이스에 맞는 드라이버들!
 
 
 
 
 
 #### JPA(Java Persistence API)
+
+![img](https://velog.velcdn.com/images%2Fadam2%2Fpost%2Fcde32cd8-b9c0-49c4-bf99-b58c0b0c2e18%2FUntitled%203.png)
+
+개발자가 JPA를 사용하면, JPA 내부에서 JDBC API를 사용하여 SQL을 호출하여 DB와 통신 = **간접적으로 사용** 
+
+
+
+### 1. insert
+
+![img](https://velog.velcdn.com/images%2Fadam2%2Fpost%2F4c17dbbd-79d3-4728-9d8c-83b64a602303%2FUntitled%204.png)
+MemberDAO에서 객체를 저장하고 싶을 때 개발자는 JPA에 Member 객체를 넘김
+
+
+
+### 2. find
+
+![img](https://velog.velcdn.com/images%2Fadam2%2Fpost%2Fb579405a-fca9-4925-a418-1f2bcac68597%2FUntitled%205.png)
+개발자는 member의 pk 값을 JPA에 넘긴다.
+
+결과 반환 이후 결과(ResultSet)를 객체에 모두 매핑
+쿼리를 JPA가 만들어 주기 때문에 Object와 RDB 간의 패러다임 불일치를 해결
+
+
+
+
 

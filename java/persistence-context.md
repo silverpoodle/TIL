@@ -5,7 +5,7 @@
 <img src="https://static.packt-cdn.com/products/9781788391078/graphics/cdbb56bb-b04a-4bab-92b9-940af37a1cbb.png" alt="img" style="zoom:37%;" />
 
 - **영속성 유닛**: 응용프로그램의 EntityManager 인스턴스에 의해 관리되는 모든 엔티티 클래스 집합을 정의
-- **EntityManagerFactory**:  애플리케이션 전체에서 단 하나만 존재하며, 데이터베이스와의 연결을 설정하고 엔터티 매니저를 생성하는 역할 (인터페이)
+- **EntityManagerFactory**:  애플리케이션 전체에서 단 하나만 존재하며, 데이터베이스와의 연결을 설정하고 엔터티 매니저를 생성하는 역할 (인터페이스)
 - **EntityManager**: DB table과  엔티티에 대한 CRUD 작업을 수행하기 위한 메소드들을 제공하며 엔티티의 라이프 사이클과 영속성 관리등을 담당
   각각의 트랜잭션마다 EntityManager가 생성되어 사용되며, 트랜잭션이 종료될 때 영속성 컨텍스트와 함께 소멸
 

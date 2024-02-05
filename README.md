@@ -64,6 +64,7 @@
 - database
 - sql
 - Data-structure
+- hibernate, jpa
 
 
 ---

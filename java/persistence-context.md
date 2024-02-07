@@ -36,6 +36,8 @@ emf.close();
 
 #### 캐시 (cache)
 
+**네트워크를 통해 DB에 접근하는 것은 시간과 비용이 많이 든다! 따라서 조회한 데이터를 메모리에 넣어두면 DB 접근 횟수를 줄여 성능 개선 가능** 
+
 **```엔티티 조회 - 1차 캐시 활용```**
 
 ![Caching in Hibernate: First Level and Second Level Cache in Hibernate -  Dinesh on Java](https://i0.wp.com/www.dineshonjava.com/wp-content/uploads/2017/04/hibernate_cache.jpg?w=728&ssl=1)
@@ -87,7 +89,7 @@ Member cachedMember2 = em.find(Member.class, "member1");
 
 #### 쓰기 지연 (Transactional Write-Behind)
 
-**```영속성 컨텍스트에 변경이 발생했을 때, 바로 데이터베이스로 쿼리를 보내지 않고 SQL 쿼리를 버퍼에 모아놨다가, 영속성 컨텍스트가 flush 하는 시점에 모아둔 SQL 쿼리를 데이터베이스로 보내는 기능```**
+**```영속성 컨텍스트에 변경이 발생했을 때, 바로 데이터베이스로 쿼리를 보내지 않고 SQL 쿼리를 버퍼에 모아놨다가, 영속성 컨텍스트가 flush 하는 시점에 모아둔 SQL 쿼리를 데이터베이스로 보내는 기능```** 
 
 ```java
 EntityManager em = emf.createEntityManager();

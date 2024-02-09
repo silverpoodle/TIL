@@ -18,10 +18,6 @@
 
 
 
-
-
----
-
 ## Java
 
 - [클래스, 객체, 인스턴스(Class, Data, Instance)](https://github.com/silverpoodle/TIL/blob/main/java/class-object-instance.md)
@@ -34,7 +30,7 @@
 - [Hibernate, JPA](https://github.com/silverpoodle/TIL/blob/main/java/hibernate.md)
 - [영속성 컨텍스트, 캐시 (Persistence Context, Cache)](https://github.com/silverpoodle/TIL/blob/main/java/persistence-context.md)
 
-
+<br/>
 
 ## Database
 
@@ -49,7 +45,7 @@
 - [MySQL](https://github.com/silverpoodle/TIL/blob/main/database/mysql.md)
 - [Redis](https://github.com/silverpoodle/TIL/blob/main/database/redis.md)
 
-
+<br/><br/>
 
 - react
 - spring-security

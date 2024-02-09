@@ -6,70 +6,57 @@
 
 <br>
 
-<div align="center">
 
-  #### Language
-  <img src="https://img.shields.io/badge/java-007396?style=for-the-badge&logo=java&logoColor=white"> 
-  <img src="https://img.shields.io/badge/javascript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black"> 
-  <img src="https://img.shields.io/badge/kotlin-7F52FF?style=for-the-badge&logo=Kotlin&logoColor=white">
-  <br>
 
-  #### Library & Framework & Runtime
-  <img src="https://img.shields.io/badge/spring-6DB33F?style=for-the-badge&logo=spring&logoColor=white">
-  <img src="https://img.shields.io/badge/node.js-339933?style=for-the-badge&logo=Node.js&logoColor=white"> 
-  <img src="https://img.shields.io/badge/react-61DAFB?style=for-the-badge&logo=react&logoColor=black"> 
-  <img src="https://img.shields.io/badge/JUnit5-25A162?style=for-the-badge&logo=JUnit5&logoColor=white"> 
+## Contents
 
-  <br>
-
-  #### Database
-  <img src="https://img.shields.io/badge/mysql-4479A1?style=for-the-badge&logo=mysql&logoColor=white"> 
-  <img src="https://img.shields.io/badge/mongoDB-47A248?style=for-the-badge&logo=MongoDB&logoColor=white">
-  <img src="https://img.shields.io/badge/Redis-DC382D?style=for-the-badge&logo=Redis&logoColor=white">
-
-  <br>
-
-  <!-- #### ORM
-
-  <br> 
-
-  -->
-
-  #### Version Control
-  <img src="https://img.shields.io/badge/github-181717?style=for-the-badge&logo=github&logoColor=white">
-  <img src="https://img.shields.io/badge/git-F05032?style=for-the-badge&logo=git&logoColor=white">
-
-  <br>
-
-  #### Cloud
-  <img src="https://img.shields.io/badge/amazonaws-232F3E?style=for-the-badge&logo=amazonaws&logoColor=white">
-  <img src="https://img.shields.io/badge/firebase-FFCA28?style=for-the-badge&logo=firebase&logoColor=white">
-</div>
+- [Java](#Java)
+- [Database](#Database)
+- 
 
 
 
-<br>
+
+
+
 
 ---
 
-### category
+## Java
+
+- [클래스, 객체, 인스턴스(Class, Data, Instance)](https://github.com/silverpoodle/TIL/blob/main/java/class-object-instance.md)
+- [반복문 (Iteration)](https://github.com/silverpoodle/TIL/blob/main/java/iteration.md)
+- [java.Util](https://github.com/silverpoodle/TIL/blob/main/java/util.md)
+- [데이터타입 (Data Type)](https://github.com/silverpoodle/TIL/blob/main/java/data-type.md)
+- [실행 과정 (Java Execution)](https://github.com/silverpoodle/TIL/blob/main/java/excecution.md)
+- [입출력 (Input-Output)](https://github.com/silverpoodle/TIL/blob/main/java/input-output.md)
+- [오버로딩, 오버라이딩 (Overload, Override)](https://github.com/silverpoodle/TIL/blob/main/java/overload-overide.md)
+- [Hibernate, JPA](https://github.com/silverpoodle/TIL/blob/main/java/hibernate.md)
+- [영속성 컨텍스트, 캐시 (Persistence Context, Cache)](https://github.com/silverpoodle/TIL/blob/main/java/persistence-context.md)
+
+
+
+## Database
+
+- [기본 개념 (basic)](https://github.com/silverpoodle/TIL/blob/main/database/basic.md)
+- [데이터베이스 설계 (Database Design)](https://github.com/silverpoodle/TIL/blob/main/database/design.md)
+- [정규화 (Normalization)](https://github.com/silverpoodle/TIL/blob/main/database/nomalization.md)
+- [트랜잭션 (Transaction)](https://github.com/silverpoodle/TIL/blob/main/database/transcation.md)
+- [격리 레벨 (Isolation Level)](https://github.com/silverpoodle/TIL/blob/main/database/isolation-level.md)
+- [회복 (Recovery)](https://github.com/silverpoodle/TIL/blob/main/database/recovery.md)
+- [동시성 제어 (Concurrency Control)](https://github.com/silverpoodle/TIL/blob/main/database/concurrency-control.md)
+- [Index](https://github.com/silverpoodle/TIL/blob/main/database/index.md)
+- [MySQL](https://github.com/silverpoodle/TIL/blob/main/database/mysql.md)
+- [Redis](https://github.com/silverpoodle/TIL/blob/main/database/redis.md)
+
+
 
 - react
 - spring-security
 - webclient
-- Oath
-- java
 - spring
 - cs
-- database
 - sql
 - Data-structure
-- hibernate, jpa
 
-
----
-
-### commit
-
-- one commit a day
-- commit -m "DATE"
+### 

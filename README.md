@@ -1,12 +1,16 @@
-# TIL
+<br>
+
+> #### ✏️ TODAY I LEARNED : A collection of write-ups on things I learn a day! 
+>
+> #### 꾸준히 공부하고 기록하는 습관을 길러봅시당! 🐶🐶🐶
 
 <br>
 
-> #### ✏️ TODAY I LEARNED : A collection of write-ups on things I learn a day!
+[![Hits](https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https%3A%2F%2Fgithub.com%2Fsilverpoodle%2FTIL&count_bg=%236D6B72&title_bg=%23FF90C8&icon=&icon_color=%23FF90C8&title=Hello%21&edge_flat=false)](https://hits.seeyoufarm.com)
 
-<br>
+ [wanny](https://github.com/Subak-Uncle), [Taegeun Park](https://github.com/taegeun-park), [sjPark](https://github.com/myryhmetree), [SUI](https://github.com/numerical43), [bbbbooo](https://github.com/bbbbooo) 님께 많은 도움 받았습니다. 
 
-
+<br/><br/><br/>
 
 ## Contents
 
@@ -14,9 +18,7 @@
 - [Database](#Database)
 - 
 
-
-
-
+<br/><br/><br/>
 
 ## Java
 
@@ -54,5 +56,7 @@
 - cs
 - sql
 - Data-structure
+
+### 
 
 ### 

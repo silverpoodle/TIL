@@ -34,11 +34,16 @@ emf.close();
 
 
 
-#### 캐시 (cache)
 
+
+<img src="https://blog.kakaocdn.net/dn/bwRL4O/btrqmNpnUVQ/meiNc9W0EZzjhAMKNAK8g0/img.png" alt="img" style="zoom:50%;" />
+
+#### 1차 캐시 (first level cache)
+
+**1차 캐시는 영속성 컨텍스트 내부에 존재 -> on/off 할 수 있는 기능 x**
 **네트워크를 통해 DB에 접근하는 것은 시간과 비용이 많이 든다! 따라서 조회한 데이터를 메모리에 넣어두면 DB 접근 횟수를 줄여 성능 개선 가능** 
 
-**```엔티티 조회 - 1차 캐시 활용```**
+**```엔티티 조회 - 1차 캐시 활용, (1차 캐시는 영속성 컨텍스트 내부에 존재) ```**
 
 ![Caching in Hibernate: First Level and Second Level Cache in Hibernate -  Dinesh on Java](https://i0.wp.com/www.dineshonjava.com/wp-content/uploads/2017/04/hibernate_cache.jpg?w=728&ssl=1)
 
@@ -84,6 +89,20 @@ Member cachedMember2 = em.find(Member.class, "member1");
 ```
 
 
+
+하지만!
+**동일한 트랜잭션 내에서만 1차 캐시가 존재하기 때문에 이미 1차 캐시에 저장되어 있는 경우는 흔치 않음**
+
+
+
+
+
+#### 2차 캐시(second level cache)
+
+**2차 캐시는 애플리케이션을 종료할 때까지 유지, 즉 애플리케이션 범위의 캐시**
+
+- 2차 캐시를 적용하면 엔티티 매니저를 통해 데이터를 조회할 때 우선 2차 캐시에서 조회
+- 2차 캐시를 적정히 활용하면 데이터베이스 조회 횟수를 획기적으로 줄일 수 있음
 
 
 

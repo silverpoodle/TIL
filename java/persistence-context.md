@@ -99,6 +99,10 @@ Member cachedMember2 = em.find(Member.class, "member1");
 
 #### 2차 캐시(second level cache)
 
+![image-20240210144158979](https://raw.githubusercontent.com/silverpoodle/TIL/main/images/image-20240210144158979.png)
+
+
+
 **2차 캐시는 애플리케이션을 종료할 때까지 유지, 즉 애플리케이션 범위의 캐시**
 
 - 2차 캐시를 적용하면 엔티티 매니저를 통해 데이터를 조회할 때 우선 2차 캐시에서 조회

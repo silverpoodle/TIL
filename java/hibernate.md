@@ -11,7 +11,7 @@
 
 
 
-#### ORM(Object Relationship Mapping)
+### ORM(Object Relationship Mapping)
 
 ![ORM Tool](https://media.geeksforgeeks.org/wp-content/uploads/20230619125144/Sender2.png)
 
@@ -21,7 +21,7 @@
 
 
 
-#### 패러다임 불일치 문제
+### 패러다임 불일치 문제
 
 자바의 ***객체지향***과 데이터베이스의 ***관계지향***. 즉, 지향하는 바가 다르기 때문에 발생하는 문제!
 
@@ -52,9 +52,20 @@ CREATE TABLE course (
 
 
 
+### Session과 Transaction
+
+- **Session**
+  - Hibernate에서 데이터베이스와의 연결을 나타내는 객체로, 영속성 컨텍스트를 담당. 
+  - Session은 데이터베이스와의 트랜잭션을 관리하고, 영속성 컨텍스트를 통해 엔티티를 관리
+- **Transaction**
+  - 데이터베이스 트랜잭션을 나타내며, 트랜잭션 내에서 실행되는 모든 데이터베이스 조작은 commit 또는 rollback으로
+    트랜잭션의 일부로 처리 (트랜잭션을 사용하여 데이터의 일관성과 무결성을 보장)
 
 
-#### 영속성 컨텍스트(persistence context)
+
+
+
+### 영속성 컨텍스트(persistence context)
 
 = **엔티티를 영구 저장하는 환경**
 

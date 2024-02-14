@@ -1,6 +1,8 @@
 ## 1️⃣ JWT란?
 
-![jwt.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/440e0051-e1a6-4fc1-b7a8-96dc6ee9928e/1b4588a3-1312-4e59-9a42-e226809dc1f4/jwt.png)
+![image-20240210165542994](https://raw.githubusercontent.com/silverpoodle/TIL/main/images/image-20240210165542994.png)
+
+
 
 ### 1-1. J**WT의 개념과 역할**
 
@@ -19,9 +21,11 @@ JSON Web Token (JWT)은 웹에서 정보를 안전하게 전송하기 위한 표
 2. **정보 교환:** JWT는 클라이언트와 서버 간의 정보를 안전하게 교환하는 데에 사용된다. 토큰이 서명되어 있기 때문에 변조가 어렵다. 정보는 JWT 내에 저장되며, 시그니처를 통해 정보의 무결성이 보장된다.
 3. **권한 부여(Authorization) :** JWT는 사용자가 특정 리소스에 대한 접근 권한을 가지고 있는지를 확인하는 데 사용된다. 토큰 내의 클레임을 통해 사용자의 권한을 판단할 수 있다.
 
+
+
 ## 2️⃣ JWT의 구조
 
-![Untitled](https://prod-files-secure.s3.us-west-2.amazonaws.com/440e0051-e1a6-4fc1-b7a8-96dc6ee9928e/f5d805cb-fa01-481f-b8e5-83b184ddb096/Untitled.png)
+<img src="https://raw.githubusercontent.com/silverpoodle/TIL/main/images/image-20240210165609679.png" alt="image-20240210165609679" style="zoom:80%;" />
 
 JWT는 세 가지 부분으로 이루어져 있다. 각 부분은 `Base64`로 인코딩되며, 점('.')으로 구분된다.
 
@@ -62,6 +66,8 @@ JWT는 세 가지 부분으로 이루어져 있다. 각 부분은 `Base64`로 �
    여기서 `HMACSHA256`는 사용된 해싱 알고리즘을 나타내고, `header`와 `payload`는 각각 헤더와 페이로드를 base64Url로 인코딩한 것이다. `secret`은 비밀 키이다.
 
    이렇게 생성된 시그니처는 토큰의 마지막 부분에 추가되며, 이를 통해 토큰이 변조되지 않았음을 확인할 수 있다.
+
+
 
 ## 3️⃣ **JWT의 생성과 전송, 검증 과정**
 
@@ -140,6 +146,8 @@ JWT는 세 가지 부분으로 이루어져 있다. 각 부분은 `Base64`로 �
    - Payload의 클레임들을 확인하고, 필요한 정보를 추출하여 사용한다.
    - 만료 시간 등을 확인하여 토큰의 유효성을 판단한다.
 
+
+
 ## 4️⃣ Access Token과 Refresh Token
 
 JWT에 대해 찾아보면 Access Token과 Refresh Token에 대한 얘기가 꼭 함께 나온다. **Access Token과 Refresh Token은 JWT를 사용하는 구체적인 인증 토큰의 예시라고 할 수 있다.** 그렇다면 Access Token과 Refresh Token은 뭘까?
@@ -158,7 +166,8 @@ Access Token과 Refresh Token은 모두 사용자 인증에 사용되는 토큰�
 
 Access Token은 일정 시간 후에 만료되며, 만료 시간은 일반적으로 짧게 설정된다. 이렇게 하면, 토큰이 탈취되더라도 공격자가 제한된 시간 동안만 사용할 수 있다. 일반적으로 클라이언트 측에 저장되며 서버에 요청을 보낼 떄마다 이 토큰을 함께 보내게 된다. 웹 브라우저에서는 HTTP Only 쿠키, Local Storage, Session Storage 등을 사용해 Access 토큰을 저장할 수 있다. 그러나 이 중 HTTP Only 쿠키를 사용하는 것이 XSS 공격으로부터 토큰을 보호하는 데 가장 효과적이다.
 
-<aside> ❓ **HTTP only 쿠키란?**
+❓ **HTTP only 쿠키란?**
+
 
 HTTP Only 쿠키는 웹 브라우저에서 자바스크립트를 통한 접근이 불가능한 쿠키를 말한다. 이는 웹사이트가 사용자의 웹 브라우저에 데이터를 저장할 때 사용하는 방법 중 하나이다.
 
@@ -172,7 +181,9 @@ HTTP Only 속성이 설정된 쿠키는 웹 서버와 웹 브라우저 간에 HT
 
 따라서, Access Token은 직접적인 사용자 인증에 사용되며, Refresh Token은 Access Token이 만료된 후에 새로운 Access Token을 발급받는 데 사용된다.
 
-![스크린샷 2022-06-09 오후 4.12.24.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/440e0051-e1a6-4fc1-b7a8-96dc6ee9928e/ba554bcd-4562-4aea-ad02-87cb4159d676/%E1%84%89%E1%85%B3%E1%84%8F%E1%85%B3%E1%84%85%E1%85%B5%E1%86%AB%E1%84%89%E1%85%A3%E1%86%BA_2022-06-09_%E1%84%8B%E1%85%A9%E1%84%92%E1%85%AE_4.12.24.png)
+<img src="https://raw.githubusercontent.com/silverpoodle/TIL/main/images/image-20240210165657899.png" alt="image-20240210165657899" style="zoom:67%;" />
+
+
 
 ## 5️⃣ JWT의 보안
 

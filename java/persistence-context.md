@@ -36,7 +36,7 @@ emf.close();
 
 
 
-<img src="https://blog.kakaocdn.net/dn/bwRL4O/btrqmNpnUVQ/meiNc9W0EZzjhAMKNAK8g0/img.png" alt="img" style="zoom:50%;" />
+<img src="https://raw.githubusercontent.com/silverpoodle/TIL/main/images/image-20240210145943281.png" alt="image-20240210145943281" style="zoom:50%;" />
 
 #### 1차 캐시 (first level cache)
 
@@ -107,6 +107,8 @@ Member cachedMember2 = em.find(Member.class, "member1");
 
 - 2차 캐시를 적용하면 엔티티 매니저를 통해 데이터를 조회할 때 우선 2차 캐시에서 조회
 - 2차 캐시를 적정히 활용하면 데이터베이스 조회 횟수를 획기적으로 줄일 수 있음
+- 영속성 컨텍스트가 다르면 객체 동일성을 보장하지 않음
+- 동시성을 극대화하기 위해 객체를 직접 반환하지 않고 복사본을 만들어서 반환
 
 
 
@@ -178,7 +180,7 @@ entityManager.getTransaction().commit();
 1. **스냅샷**: JPA는 엔티티를 영속성 컨텍스트에 저장할 때 최초 상태를 복사하여 저장
 2. 플러시 시점에 영속성 컨텍스트의 스냅샷과 현재 엔티티를 비교하여 변경된 엔티티를 찾음
 3. 변경된 엔티티가 있다면, 수정 쿼리를 생성하고 쓰기 지연 SQL 저장소에 보냄
-4. 쓰기 지연 저장소의 SQL을 DB에 보
+4. 쓰기 지연 저장소의 SQL을 DB에 보냄
 5. DB 트랜잭션을 커밋
 
 ```java

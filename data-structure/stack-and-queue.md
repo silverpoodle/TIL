@@ -19,123 +19,119 @@
 
 1. **배열을 이용한 구현**
 
-   - code
-
-     ```java
-     public class ArrayStack {
-         private int maxSize;
-         private int top;
-         private int[] stackArray;
-     
-         public ArrayStack(int size) {
-             maxSize = size;
-             stackArray = new int[maxSize];
-             top = -1; // 초기에는 스택이 비어있음을 나타내기 위해 -1로 설정
-         }
-     
-         public void push(int value) {
-             if (top < maxSize - 1) {
-                 stackArray[++top] = value;
-             } else {
-                 System.out.println("스택이 가득 찼습니다.");
-             }
-         }
-     
-         public int pop() {
-             if (top >= 0) {
-                 return stackArray[top--];
-             } else {
-                 System.out.println("스택이 비어있습니다.");
-                 return -1; // 스택이 비어있을 때의 특별한 값 또는 예외 처리를 수행할 수 있음
-             }
-         }
-     
-         public int peek() {
-             if (top >= 0) {
-                 return stackArray[top];
-             } else {
-                 System.out.println("스택이 비어있습니다.");
-                 return -1;
-             }
-         }
-     
-         public boolean isEmpty() {
-             return top == -1;
-         }
-     
-         public int size() {
-             return top + 1;
-         }
-     }
-     ```
-
+   ```java
+   public class ArrayStack {
+       private int maxSize;
+       private int top;
+       private int[] stackArray;
+   
+       public ArrayStack(int size) {
+           maxSize = size;
+           stackArray = new int[maxSize];
+           top = -1; // 초기에는 스택이 비어있음을 나타내기 위해 -1로 설정
+       }
+   
+       public void push(int value) {
+           if (top < maxSize - 1) {
+               stackArray[++top] = value;
+           } else {
+               System.out.println("스택이 가득 찼습니다.");
+           }
+       }
+   
+       public int pop() {
+           if (top >= 0) {
+               return stackArray[top--];
+           } else {
+               System.out.println("스택이 비어있습니다.");
+               return -1; // 스택이 비어있을 때의 특별한 값 또는 예외 처리를 수행할 수 있음
+           }
+       }
+   
+       public int peek() {
+           if (top >= 0) {
+               return stackArray[top];
+           } else {
+               System.out.println("스택이 비어있습니다.");
+               return -1;
+           }
+       }
+   
+       public boolean isEmpty() {
+           return top == -1;
+       }
+   
+       public int size() {
+           return top + 1;
+       }
+   }
+   ```
+   
 2. **연결 리스트를 이용한 구현**
 
-   - code
-
-     ```java
-     public class Node {
-         public int data;
-         public Node next;
-     
-         public Node(int data) {
-             this.data = data;
-             this.next = null;
-         }
-     }
-     
-     public class LinkedStack {
-         private Node top;
-     
-         public LinkedStack() {
-             this.top = null;
-         }
-     
-         public void push(int value) {
-             Node newNode = new Node(value);
-             if (top == null) {
-                 top = newNode;
-             } else {
-                 newNode.next = top;
-                 top = newNode;
-             }
-         }
-     
-         public int pop() {
-             if (top != null) {
-                 int value = top.data;
-                 top = top.next;
-                 return value;
-             } else {
-                 System.out.println("스택이 비어있습니다.");
-                 return -1;
-             }
-         }
-     
-         public int peek() {
-             if (top != null) {
-                 return top.data;
-             } else {
-                 System.out.println("스택이 비어있습니다.");
-                 return -1;
-             }
-         }
-     
-         public boolean isEmpty() {
-             return top == null;
-         }
-     
-         public int size() {
-             int count = 0;
-             Node current = top;
-             while (current != null) {
-                 count++;
-                 current = current.next;
-             }
-             return count;
-         }
-     }
-     ```
+   ```java
+   public class Node {
+       public int data;
+       public Node next;
+   
+       public Node(int data) {
+           this.data = data;
+           this.next = null;
+       }
+   }
+   
+   public class LinkedStack {
+       private Node top;
+   
+       public LinkedStack() {
+           this.top = null;
+       }
+   
+       public void push(int value) {
+           Node newNode = new Node(value);
+           if (top == null) {
+               top = newNode;
+           } else {
+               newNode.next = top;
+               top = newNode;
+           }
+       }
+   
+       public int pop() {
+           if (top != null) {
+               int value = top.data;
+               top = top.next;
+               return value;
+           } else {
+               System.out.println("스택이 비어있습니다.");
+               return -1;
+           }
+       }
+   
+       public int peek() {
+           if (top != null) {
+               return top.data;
+           } else {
+               System.out.println("스택이 비어있습니다.");
+               return -1;
+           }
+       }
+   
+       public boolean isEmpty() {
+           return top == null;
+       }
+   
+       public int size() {
+           int count = 0;
+           Node current = top;
+           while (current != null) {
+               count++;
+               current = current.next;
+           }
+           return count;
+       }
+   }
+   ```
 
 
 
@@ -179,7 +175,7 @@
 
 - 은행 업무
 - 콜센터 고객 대기시간
-- BFS
+- **BFS**
 - 캐시 구현
 
 
@@ -190,125 +186,121 @@
 
 1. **배열을 이용한 구현**
 
-   - code
-
-     ```java
-     public class ArrayQueue {
-         private static final int MAX_SIZE = 100;
-         private int[] queueArray;
-         private int front, rear;
-     
-         public ArrayQueue() {
-             this.queueArray = new int[MAX_SIZE];
-             this.front = -1;
-             this.rear = -1;
-         }
-     
-         public void enqueue(int data) {
-             if (rear == MAX_SIZE - 1) {
-                 System.out.println("큐가 가득 찼습니다.");
-                 return;
-             }
-             if (front == -1) {
-                 front++;
-             }
-             queueArray[++rear] = data;
-         }
-     
-         public int dequeue() {
-             if (front == -1 || front > rear) {
-                 System.out.println("큐가 비어있습니다.");
-                 return -1; // 또는 예외 처리
-             }
-             return queueArray[front++];
-         }
-     
-         public int peek() {
-             if (front == -1 || front > rear) {
-                 System.out.println("큐가 비어있습니다.");
-                 return -1; // 또는 예외 처리
-             }
-             return queueArray[front];
-         }
-     
-         public boolean isEmpty() {
-             return front == -1 || front > rear;
-         }
-     
-         public int size() {
-             return isEmpty() ? 0 : rear - front + 1;
-         }
-     }
-     ```
-
+   ```java
+   public class ArrayQueue {
+       private static final int MAX_SIZE = 100;
+       private int[] queueArray;
+       private int front, rear;
+   
+       public ArrayQueue() {
+           this.queueArray = new int[MAX_SIZE];
+           this.front = -1;
+           this.rear = -1;
+       }
+   
+       public void enqueue(int data) {
+           if (rear == MAX_SIZE - 1) {
+               System.out.println("큐가 가득 찼습니다.");
+               return;
+           }
+           if (front == -1) {
+               front++;
+           }
+           queueArray[++rear] = data;
+       }
+   
+       public int dequeue() {
+           if (front == -1 || front > rear) {
+               System.out.println("큐가 비어있습니다.");
+               return -1; // 또는 예외 처리
+           }
+           return queueArray[front++];
+       }
+   
+       public int peek() {
+           if (front == -1 || front > rear) {
+               System.out.println("큐가 비어있습니다.");
+               return -1; // 또는 예외 처리
+           }
+           return queueArray[front];
+       }
+   
+       public boolean isEmpty() {
+           return front == -1 || front > rear;
+       }
+   
+       public int size() {
+           return isEmpty() ? 0 : rear - front + 1;
+       }
+   }
+   ```
+   
 2. **연결 리스트를 이용한 구현**
 
-   - code
-
-     ```java
-     class Node {
-         int data;
-         Node next;
-     
-         public Node(int data) {
-             this.data = data;
-             this.next = null;
-         }
-     }
-     
-     public class LinkedQueue {
-         private Node front, rear;
-     
-         public LinkedQueue() {
-             this.front = this.rear = null;
-         }
-     
-         public void enqueue(int data) {
-             Node newNode = new Node(data);
-             if (rear == null) {
-                 front = rear = newNode;
-                 return;
-             }
-             rear.next = newNode;
-             rear = newNode;
-         }
-     
-         public int dequeue() {
-             if (front == null) {
-                 System.out.println("큐가 비어있습니다.");
-                 return -1; // 또는 예외 처리
-             }
-             int data = front.data;
-             front = front.next;
-             if (front == null) {
-                 rear = null;
-             }
-             return data;
-         }
-     
-         public int peek() {
-             if (front == null) {
-                 System.out.println("큐가 비어있습니다.");
-                 return -1; // 또는 예외 처리
-             }
-             return front.data;
-         }
-     
-         public boolean isEmpty() {
-             return front == null;
-         }
-     
-         public int size() {
-             int count = 0;
-             Node current = front;
-             while (current != null) {
-                 count++;
-                 current = current.next;
-             }
-             return count;
-         }
-     }
-     ```
+   ```java
+   class Node {
+       int data;
+       Node next;
+   
+       public Node(int data) {
+           this.data = data;
+           this.next = null;
+       }
+   }
+   
+   public class LinkedQueue {
+       private Node front, rear;
+   
+       public LinkedQueue() {
+           this.front = this.rear = null;
+       }
+   
+       public void enqueue(int data) {
+           Node newNode = new Node(data);
+           if (rear == null) {
+               front = rear = newNode;
+               return;
+           }
+           rear.next = newNode;
+           rear = newNode;
+       }
+   
+       public int dequeue() {
+           if (front == null) {
+               System.out.println("큐가 비어있습니다.");
+               return -1; // 또는 예외 처리
+           }
+           int data = front.data;
+           front = front.next;
+           if (front == null) {
+               rear = null;
+           }
+           return data;
+       }
+   
+       public int peek() {
+           if (front == null) {
+               System.out.println("큐가 비어있습니다.");
+               return -1; // 또는 예외 처리
+           }
+           return front.data;
+       }
+   
+       public boolean isEmpty() {
+           return front == null;
+       }
+   
+       public int size() {
+           int count = 0;
+           Node current = front;
+           while (current != null) {
+               count++;
+               current = current.next;
+           }
+           return count;
+       }
+   }
+   ```
 
 
 

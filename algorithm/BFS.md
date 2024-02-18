@@ -11,6 +11,14 @@
 
 ![image-20240217222338278](https://raw.githubusercontent.com/silverpoodle/TIL/main/images/image-20240217222338278.png)
 
+```less
+1. 가장 먼저 넣었던 것을 꺼냄
+2. 연결됨 점을 큐에 넣기!
+3. 큐가 텅~ 될 때까지 반복!
+
+//순서가 보장되어야 함
+```
+
 
 
 ```math

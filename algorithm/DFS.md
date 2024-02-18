@@ -7,6 +7,125 @@
 
 
 
+#### 재귀를 이용한 구현 (추천)
+
+```less
+1. 동작검증 쉬움
+	하나의 조합을 만들어 비교하는 과정을 반복 -> 정답 비교가 쉽고 빠름
+2. BFS 의 경우 여러개의 조합을 동시에 만들며 한칸씩 비교하기 때문에 언제부터 틀렸는지 분석하기 쉽지 않음
+
+but!!!
+시간 초과 위험성 -> 수행 시간 관점에서는 복불복
+```
+
+
+
+```java
+import java.util.ArrayList;
+import java.util.List;
+
+class Node {
+    int value;
+    List<Node> neighbors;
+
+    public Node(int value) {
+        this.value = value;
+        this.neighbors = new ArrayList<>();
+    }
+
+    public void addNeighbor(Node neighbor) {
+        this.neighbors.add(neighbor);
+    }
+}
+
+public class DFS {
+    public static void main(String[] args) {
+        // 그래프 생성
+        Node node0 = new Node(0);
+        Node node1 = new Node(1);
+        Node node2 = new Node(2);
+        Node node3 = new Node(3);
+        Node node4 = new Node(4);
+
+        node0.addNeighbor(node1);
+        node0.addNeighbor(node2);
+        node1.addNeighbor(node3);
+        node2.addNeighbor(node4);
+
+        // DFS 호출
+        dfs(node0, new boolean[5]);
+    }
+
+    public static void dfs(Node node, boolean[] visited) {
+        // 현재 노드 방문 처리
+        System.out.println(node.value + " ");
+        visited[node.value] = true;
+
+        // 인접 노드들에 대해 재귀적으로 DFS 호출
+        for (Node neighbor : node.neighbors) {
+            if (!visited[neighbor.value]) {
+                dfs(neighbor, visited);
+            }
+        }
+    }
+}
+```
+
+```less
+
+그래프 초기화 및 노드 생성:
+- 노드 0부터 노드 4까지 5개의 노드를 생성하고, 각 노드의 이웃 노드를 설정
+- node0의 이웃은 node1과 node2, node1의 이웃은 node3, node2의 이웃은 node4
+
+1. DFS 호출 시작:
+dfs 메서드를 호출하고, 시작 노드로 node0을 전달
+방문 여부를 나타내는 배열 visited를 초기화합니다. 초기에는 모든 원소가 false
+[false, false, false, false, false]
+
+
+2. DFS 함수 내부 (시작 노드 0):
+현재 노드 node0를 방문 처리하고, visited 배열의 해당 인덱스를 true로 설정합
+현재 노드의 이웃 노드들을 확인
+[true, false, false, false, false]
+
+
+3. DFS 함수 내부 (이웃 노드 1):
+node0의 이웃인 node1을 방문하지 않았다면 dfs를 재귀적으로 호출
+현재 노드 node1을 방문 처리하고, visited 배열의 해당 인덱스를 true로 설정
+현재 노드 node1의 이웃 노드인 node3을 확인
+[true, true, false, false, false]
+
+
+4. DFS 함수 내부 (이웃 노드 3):
+node1의 이웃인 node3을 방문하지 않았다면dfs를 재귀적으로 호출
+현재 노드 node3을 방문 처리하고, visited 배열의 해당 인덱스를 true로 설정
+현재 노드 node3의 이웃 노드는 없음!!!
+[true, true, false, true, false]
+
+
+5. DFS 함수 내부 (이웃 노드 2):
+node0의 다음 이웃인 node2를 방문하지 않았다면 dfs를 재귀적으로 호출
+현재 노드 node2을 방문 처리하고, visited 배열의 해당 인덱스를 true로 설정
+현재 노드 node2의 이웃 노드인 node4를 확인
+[true, true, true, true, false]
+
+
+6. DFS 함수 내부 (이웃 노드 4):
+node2의 이웃인 node4를 방문하지 않았다면, dfs를 재귀적으로 호출
+현재 노드 node4을 방문 처리하고, visited 배열의 해당 인덱스를 true로 설정
+현재 노드 node4의 이웃 노드는 없음!!!
+[true, true, true, true, true]
+
+
+7. DFS 함수 종료: 모든 노드를 방문하고 dfs 함수가 종료
+
+//결과: 0 1 2 3 4
+```
+
+
+
+
+
 #### 스택(Stack)을 이용한 구현
 
 <img src="https://miro.medium.com/v2/resize:fit:1400/1*EpJM4d8ifViCuVz2Kmtmzw.png" alt="Depth-First Search (DFS) Algorithm With Python | by Fahadul Shadhin | Geek  Culture | Medium" style="zoom:50%;" />

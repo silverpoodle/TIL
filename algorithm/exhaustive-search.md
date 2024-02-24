@@ -2,9 +2,9 @@
 
 >**모든 가능한 경우의 수**를 탐색하여 최적의 결과를 찾는 방법
 >
->모든 가능성을 고려하기 때문에 항상 최적의 해를 찾을 수 있지만 경우의 수가 매우 많은 경우 시간과 메모리의 부담
+>모든 가능성을 고려하기 때문에 최적의 해를 찾을 수 있지만 경우의 수가 매우 많은 경우 시간과 메모리의 부담
 
-
+<br/>
 
 |     알고리즘      | 특징                                                         | 장점                                             | 단점                                            |
 | :---------------: | ------------------------------------------------------------ | ------------------------------------------------ | :---------------------------------------------- |
@@ -16,7 +16,7 @@
 |      **DFS**      | 깊이 우선 탐색을 사용하여 가능한 모든 경로를 탐색            | 그래프 구조에서 높은 유연성을 제공               | 최악의 경우 모든 경로를 탐색해야 할 수 있음     |
 |      **BFS**      | 너비 우선 탐색을 사용하여 가능한 모든 상태를 탐색            | 최단 경로 문제에서 효과적으로 사용 가능          | 최악의 경우 모든 경로를 탐색해야 할 수 있음     |
 
-
+<br/>
 
 ### 브루트 포스 (Brute Force)
 
@@ -27,9 +27,9 @@
 
 <img src="https://slideplayer.com/slide/8709386/26/images/2/The+Brute-Force+Algorithms.jpg" alt="6.4: The Brute-Force Algorithms - ppt video online download" style="zoom:67%;" />
 
+> 모든 정점이 연결된 그래프에서 모든 정점을 방문하고 원래 출발지로 돌아오는 최소비용의 경로를 구하는 문제
 
-
-
+<br/><br/>
 
 
 
@@ -47,4 +47,134 @@
 | `~`    | NOT 연산: 비트를 반전                          | `~1010 = 0101`        |
 | `<<`   | 왼쪽 시프트: 비트를 왼쪽으로 이동              | `1010 << 2 = 1000`    |
 | `>>`   | 오른쪽 시프트: 비트를 오른쪽으로 이동          | `1010 >> 2 = 0010`    |
+
+```sql
+ {true, false, true, false}인 배열을 2진수로 1010으로 표현하고, 다시 십진수로 변환하면 10
+```
+
+`백준 2098, 1102`
+
+
+
+<br/><br/>
+
+### 외판원 문제 (TSP)
+
+```sql
+도시를 방문하는 경로의 모든 경우의 수를 찾아야 하기 때문에, 방문한 도시와 방문하지 않은 도시를 계속해서 추적해야 한다.
+방문한 도시에 대한 정보를 배열을 사용해서 저장하게 되면, 도시의 수가 많아질수록 메모리를 굉장히 많이 차지하게 된다.
+
+배열 대신에 비트마스킹을 사용하면 단일 정수를 사용해서 방문한 도시 집합을 나타낼 수 있다!
+```
+
+1. Brute Force
+
+   ```java
+   public class Main {
+       static int N;
+       static int[][] W;
+       static int[][] dp;
+   
+       public static void main(String[] args) {
+           Scanner sc = new Scanner(System.in);
+           N = sc.nextInt();
+           W = new int[N][N];
+           dp = new int[N][1 << N];
+   
+           for (int i = 0; i < N; i++) {
+               for (int j = 0; j < N; j++) {
+                   W[i][j] = sc.nextInt();
+               }
+           }
+   
+           System.out.println(tsp(0, 1));
+       }
+   
+       static int tsp(int current, int visited) {
+           if (visited == (1 << N) - 1) {
+               if (W[current][0] == 0) return Integer.MAX_VALUE / 2; // 시작 도시로 갈 수 없는 경우
+               return W[current][0];
+           }
+   
+           if (dp[current][visited] != 0) return dp[current][visited];
+   
+           int result = Integer.MAX_VALUE / 2;
+   
+           for (int i = 0; i < N; i++) {
+               if ((visited & (1 << i)) == 0 && W[current][i] != 0) {
+                   result = Math.min(result, W[current][i] + tsp(i, visited | (1 << i)));
+               }
+           }
+   
+           return dp[current][visited] = result;
+       }
+   }
+   
+   ```
+
+   <br/>
+
+2. Bit Mask
+
+   > 각 비트는 도시를 의미하고 그에 대한 값으로 방문 여부를 나타내도록
+   > 예를 들어, 5개의 도시가 있는 경우 {1, 2, 4} 도시를 방문했다면 이진법으로 11010(2)
+   >
+   > 이렇게 비트마스킹을 사용하게 되면 공간 복잡성을 크게 줄일 수 있고,
+   > 연산 또한 배열을 사용하는 것보다 훨씬 빠르게 수행할 수 있어 시간 복잡도를 개선할 수 있음
+
+```java
+public class TravelingSalesman {
+
+    static int N;
+    static int[][] world;
+    static int[][] dp;
+
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        N = scanner.nextInt();
+        world = new int[N][N];
+        dp = new int[N][1 << N];
+
+        for (int i = 0; i < N; i++) {
+            for (int j = 0; j < N; j++) {
+                world[i][j] = scanner.nextInt();
+            }
+        }
+
+        System.out.println(travelingSalesman(0, 1));
+    }
+
+    // 최소 비용을 찾기 위한 재귀 함수
+    static int tsp(int now, int visited) {
+        // 기저 사례: 모든 도시가 방문되었을 때
+        if (visited == (1 << N) - 1) {
+            // 가능하다면 시작 도시로 돌아가는 비용을 반환
+            return (world[now][0] != 0) ? world[now][0] : (int) 1e9;
+        }
+
+        // 현재 상태에 대한 결과가 이미 계산되었다면 반환
+        if (dp[now][visited] != 0) {
+            return dp[now][visited];
+        }
+
+        int minCost = (int) 1e9;
+
+        // 가능한 모든 다음 도시를 반복
+        for (int next = 1; next < N; next++) {
+            // 도시에 도달할 수 없거나 이미 방문한 경우 건너뛰기
+            if (world[now][next] == 0 || (visited & (1 << next)) != 0) {
+                continue;
+            }
+
+            // 다음 도시의 비용 계산 및 minCost 갱신
+            int cost = travelingSalesman(next, visited | (1 << next)) + world[now][next];
+            minCost = Math.min(cost, minCost);
+        }
+
+        // 결과를 기억하고 최소 비용 반환
+        dp[now][visited] = minCost;
+        return minCost;
+    }
+}
+```
 

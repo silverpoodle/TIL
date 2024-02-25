@@ -27,7 +27,7 @@
 
 <img src="https://slideplayer.com/slide/8709386/26/images/2/The+Brute-Force+Algorithms.jpg" alt="6.4: The Brute-Force Algorithms - ppt video online download" style="zoom:67%;" />
 
-> 모든 정점이 연결된 그래프에서 모든 정점을 방문하고 원래 출발지로 돌아오는 최소비용의 경로를 구하는 문제
+`모든 정점이 연결된 그래프에서 모든 정점을 방문하고 원래 출발지로 돌아오는 최소비용의 경로를 구하는 문제`
 
 <br/><br/>
 
@@ -52,7 +52,7 @@
  {true, false, true, false}인 배열을 2진수로 1010으로 표현하고, 다시 십진수로 변환하면 10
 ```
 
-`백준 2098, 1102`
+`백준 2098(TSP), 1102`
 
 
 

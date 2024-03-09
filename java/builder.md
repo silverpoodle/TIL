@@ -58,7 +58,7 @@
 
 *by Effective Java*
 
-**빌더(Builder) 클래스가 구현할 클래스의 정적 내부 클래스(Static Inner Class)Visit Website로 구현**
+**빌더(Builder) 클래스가 구현할 클래스의 정적 내부 클래스(Static Inner Class)로 구현**
 
 `static innter Builder Class + private Constructor`
 
@@ -154,7 +154,7 @@
 
 3. **불변성 보장**: 빌더 패턴을 사용하면 객체를 불변하게 만들기 쉽습니다. 설정 메소드를 통해 값을 변경하는 것이 아닌, 새로운 불변 객체를 생성하기 때문입니다.
 
-**선택적 인자가 많은 경우에는 빌더 패턴을, 이름을 통한 가독성과 객체 재사용은 적팩메~!** 
+**선택적 인자가 많은 경우에는 빌더 패턴을, 이름을 통한 가독성과 객체 재사용은 정팩메~!** 
 
 <br/>
 
@@ -163,19 +163,16 @@
 
 public class MemberFactory {
     public static class Member {
-        private UUID memberId;
         private String username;
         private String email;
 
-        private Member(UUID memberId, String username, String email) {
-            this.memberId = memberId;
+        private Member(String username, String email) {
             this.username = username;
             this.email = email;
         }
         
         public static Member createMember(String username, String email) {
-            UUID memberId = UUID.randomUUID();
-            return new Member(memberId, username, email);
+            return new Member(username, email);
         }
     }
 
@@ -188,23 +185,19 @@ public class MemberFactory {
 ```java
 //Builder
 public class MemberBuilder {
-    private UUID memberId;
     private String username;
     private String email;
 
     public static class Builder {
-        private UUID memberId;
         private String username;
         private String email;
 
         public MemberBuilder builder() {
-            this.memberId = UUID.randomUUID();
             return new MemberBuilder(this);
         }
     }
 
     private MemberBuilder(Builder builder) {
-        this.memberId = builder.memberId;
         this.username = builder.username;
         this.email = builder.email;
     }

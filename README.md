@@ -43,7 +43,7 @@
 
 - [기본 개념 (basic)](https://github.com/silverpoodle/TIL/blob/main/database/basic.md)
 - [데이터베이스 설계 (Database Design)](https://github.com/silverpoodle/TIL/blob/main/database/design.md)
-- [정규화 (Normalization)](https://github.com/silverpoodle/TIL/blob/main/database/nomalization.md)
+- [정규화 (Normalization)](https://github.com/silverpoodle/TIL/blob/main/database/normalization.md)
 - [트랜잭션 (Transaction)](https://github.com/silverpoodle/TIL/blob/main/database/transcation.md)
 - [격리 레벨 (Isolation Level)](https://github.com/silverpoodle/TIL/blob/main/database/isolation-level.md)
 - [회복 (Recovery)](https://github.com/silverpoodle/TIL/blob/main/database/recovery.md)

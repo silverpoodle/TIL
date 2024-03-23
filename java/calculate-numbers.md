@@ -148,3 +148,14 @@ public class Main {
 >
 > 예를 들어, 생성자를 사용하여 0.1을 BigDecimal로 만들 경우, 컴퓨터는 가장 근사치에 가까운 이진 부동 소수점 값을 선택하여 BigDecimal로 변환한다. 하지만 valueOf 메서드를 사용할 경우, 명시적으로 정확한 값인 0.1을 전달하여 BigDecimal을 생성하므로 부정확한 값이 발생하지 않는다.
 
+
+
+</br>
+
+</br>
+
+</br>
+
+참고: https://junhyunny.github.io/java/calculate-number-in-java/
+         https://wikidocs.net/189025
+         https://www.tcpschool.com/java/java_datatype_floatingPointNumber

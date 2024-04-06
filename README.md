@@ -9,7 +9,6 @@
 <br/>
 
 <div align="center">
-
 [![Hits](https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https%3A%2F%2Fgithub.com%2Fsilverpoodle%2FTIL&count_bg=%236D6B72&title_bg=%23FF90C8&icon=&icon_color=%23FF90C8&title=Hello%21&edge_flat=false)](https://hits.seeyoufarm.com)
 </div>
 
@@ -20,6 +19,9 @@
 
 - [Java](#Java)
 - [Database](#Database)
+- [Spring](#Spring)
+- [JPA](#JPA)
+- [MyBatis](#MyBatis)
 - 
 
 <br/><br/><br/>
@@ -34,7 +36,6 @@
 - [실행 과정 (Java Execution)](https://github.com/silverpoodle/TIL/blob/main/java/excecution.md)
 - [입출력 (Input-Output)](https://github.com/silverpoodle/TIL/blob/main/java/input-output.md)
 - [오버로딩, 오버라이딩 (Overload, Override)](https://github.com/silverpoodle/TIL/blob/main/java/overload-overide.md)
-- [Hibernate, JPA](https://github.com/silverpoodle/TIL/blob/main/java/hibernate.md)
 - [영속성 컨텍스트, 캐시 (Persistence Context, Cache)](https://github.com/silverpoodle/TIL/blob/main/java/persistence-context.md)
 
 <br/>
@@ -60,4 +61,23 @@
 - [WebClient](https://github.com/silverpoodle/TIL/blob/main/spring/web-client.md)
 - [Bean Scope](https://github.com/silverpoodle/TIL/blob/main/spring/bean-scope.md)
 - [Spring에서 비동기 처리 (@Async)](https://github.com/silverpoodle/TIL/blob/main/spring/async.md)
+
+
+
+<br/>
+
+## JPA
+
+- [OVERVIEW](https://github.com/silverpoodle/TIL/blob/main/jpa/overview.md)
+- [Hibernate, JPA](https://github.com/silverpoodle/TIL/blob/main/jpa/hibernate.md)
+- [영속성 컨텍스트 (Persistence Context)](https://github.com/silverpoodle/TIL/blob/main/jpa/persistence-context.md)
+
+
+
+<br/>
+
+## MyBatis
+
+- [OVERVIEW](https://github.com/silverpoodle/TIL/blob/main/mybatis/overview.md)
+- [JPA? MyBatis?](https://github.com/silverpoodle/TIL/blob/main/mybatis/jpa-mybatis.md)
 

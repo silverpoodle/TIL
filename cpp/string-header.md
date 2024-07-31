@@ -81,6 +81,7 @@ Unlike C-style strings (`char` arrays), `std::string` provides various member fu
 9. **Case Conversion**:
 
    ```cpp
+   // Convert to uppercase
    for (char &c : str2) {
        c = std::toupper(c);
    }

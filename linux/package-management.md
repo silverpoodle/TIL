@@ -4,7 +4,7 @@
   rpm -ivh mypkg-2.7-5.x86_64.rpm  # Install package
   rpm -Uvh mypkg-2.7-5.x86_64.rpm  # Upgrade package
   ```
-  - `-i`: Install the package.
+  - `-i`: Install the package. 
   - `-U`: Upgrade the package.
   - `-v`: Verbose output.
   - `-h`: Show progress bar using hashes (#).

@@ -4,7 +4,7 @@
 
 ### **1. What is Linux?**
 
-- **Linux** is a free, Unix-type operating system.
+- **Linux** is a free, Unix-type operating system. 
 - Created by **Linus Torvalds** with help from developers worldwide.
 - The Linux **kernel** is open-source and distributed under the **GPLv2** license.
 - Source code is freely available to everyone.

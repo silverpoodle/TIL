@@ -78,17 +78,17 @@
 
    <br/>
 
-   3. **Git Tagging**
+3. **Git Tagging**
 
-      - Tag a Specific Commit as being important (particular release)
+    - Tag a Specific Commit as being important (particular release)
 
-      ```shell
-      git tag -a <tag-name> -m <message> [commit No]# create annotated tag
-      
-      git tag # list tags
-      git show v1.0.0 # retreive tag data
-      git push origin v1.o.o # push tag to remote
-      git push origin --tags # push all tags
-      ```
+    ```shell
+    git tag -a <tag-name> -m <message> [commit No]# create annotated tag
+    
+    git tag # list tags
+    git show v1.0.0 # retreive tag data
+    git push origin v1.o.o # push tag to remote
+    git push origin --tags # push all tags
+    ```
 
       

@@ -138,3 +138,18 @@ image_prompts = {
 }
 ```
 
+
+
+<br/>
+
+### 문제1
+
+Disco Diffuison Model은 생성된 이미지와 실제 이미지 간의 차이를 최소화하는 **손실** 함수를 사용하여 학습하고 노이즈 제거 능력을 향상시킵니다.
+
+### 문제 2
+
+isco Diffusion Model 은 Diffusion Model과 같이 노이즈가 추가된 이미지에서 시작하여 점차적으로 **노이즈**을 제거하여 최종 이미지를 생성합니다.
+
+### 문제3
+
+Disco Diffusion Model은 U-Net 구조를 활용하여 **이미지**의 세부 정보를 추출하고 노이즈를 제거하는데 효과적인 Diffusion 모델입니다.

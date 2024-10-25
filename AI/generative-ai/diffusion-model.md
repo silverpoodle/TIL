@@ -4,7 +4,7 @@
 - 대표 모델 : `Stable Diffusion`
 -  딥러닝 분야에서 이미지, 텍스트 처리에 탁월한 성능을 보이는 딥러닝 모델
   - 데이터에 점진적으로 노이즈를 추가하는 **Forward Process(Diffusion Process)** 
-  - 역으로 노이즈를 제거하는 Reverse Process(Reverse Diffusion Process)
+  - 역으로 노이즈를 제거하는 **Reverse Process(Reverse Diffusion Process)**
 
 <img src="https://github.com/silverpoodle/typora-images/blob/main/image-20241024224644787.png?raw=true" alt="image" style="zoom:60%;" />
 
@@ -110,3 +110,28 @@ plt.imshow(image)
 image.save("/경로/diffusion_output_image.png")
 ```
 
+
+
+<br/>
+
+### 문제 1
+
+이미지에 가우시안 잡음 더해가면 이미지를 흐릿하게 만들고 잡음을 제거하는 과정을 여러 번 반복하여 각 단계에서 잡음을 입력으로 받아 이전 단계의 이미지를 예측하는 모델은 무엇인가요?
+
+확산 
+
+
+
+### 문제 2
+
+데이터에 점진적으로 노이즈를 추가하는 단계는 무슨 Processs인가요?
+
+forward
+
+
+
+###문제 3
+
+역으로 노이즈를 제거하는 단계는 무슨 Processs인가요?
+
+reverse

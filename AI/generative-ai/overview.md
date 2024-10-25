@@ -197,3 +197,53 @@
 - **하드웨어**: 하드웨어는 생성형 AI 인프라의 중요한 구성 요소 
   - 그래픽 처리 장치(GPU)와 텐서 처리 장치(TPU)는 일반적으로 생성형 AI 모델을 학습하고 실행하는 데 사용
   - LLM을 개발하고 운영하는 데 드는 비용 중 50% 이상을 차지하는 것이 하드웨어
+
+
+
+<br/>
+
+### 문제 1
+
+예술, 음악, 소프트웨어 코드, 글쓰기 등 새롭고 독창적인 콘텐츠를 만들 수 있는 인공 지능의 한 분야는 생성형 AI가 맞나요?
+
+참 ![정답](https://learn.hansung.ac.kr/theme/image.php?theme=coursemosv2&component=core&rev=1729803602&image=i%2Fgrade_correct)
+
+
+
+### 문제 **2**
+
+기존 데이터의 학습된 확률 분포를 기반으로 새로운 데이터 인스턴스를 생성하는 것은 생성 모델이 맞나요?
+
+참 ![정답](https://learn.hansung.ac.kr/theme/image.php?theme=coursemosv2&component=core&rev=1729803602&image=i%2Fgrade_correct)
+
+
+
+### 문제 3
+
+생성형 AI 모델에서 생성된 단어 또는 문구가 말이 안되거나 문법적으로 잘못된 경우를 의미하는 것은 할루시네이션이 맞나요?
+
+참 ![정답](https://learn.hansung.ac.kr/theme/image.php?theme=coursemosv2&component=core&rev=1729803602&image=i%2Fgrade_correct)
+
+
+
+### 문제4
+
+임시 혹은 영구적으로 값을 기억하기 위한 저장소는?
+
+변수
+
+
+
+### 문제 5
+
+여러가지 자료형 타입을 하나의 공간에 모아줄 수 있는 방법은?
+
+리스트
+
+
+
+### 문제 6
+
+사전 조건을 만족하는 동안 반복을 수행하는 구조는?
+
+while

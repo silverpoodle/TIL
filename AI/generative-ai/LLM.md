@@ -82,3 +82,133 @@
 - 테스트가 더 쉬움, 인간 참여형(Human-In-The-Loop)을 포함할 수 있음
 - 복잡한 작업의 경우 LLM 외부에 State 를 추적
 - 외부 도구(웹 검색, 데이터베이스 등) 사용
+
+
+
+
+
+<br/>
+
+### 5. Memory
+
+**거대언어모델**과 상호 작용할 때 당연히 **모델은 이전에 말한 내용이나 이전 대화를 기억하지 못함**
+
+-> 대화의 이전 부분을 기억하고 이를 언어 모델에 공급하여 상호 작용할 때, 대화 흐름을 가질 수 있도록 하는 **메모리**
+
+`동시에 여러 개의 메모리를 사용할 가능!`
+
+**ConversationBufferMemory**
+
+- 이 메모리를 사용하면 메시지를 저장할 수 있으며, 변수에서 메시지를 추출
+
+**ConversationBufferWindowMemory**
+
+- 이 메모리는 해당 시간 동안의 대화 상호 작용 목록을 유지, 마지막 K개 상호작용만 사용
+
+**ConversationTokenBufferMemory**
+
+- 이 메모리는 메모리의 최근 상호 작용 버퍼를 유지하고, 상호 작용 수 대신 토큰 길이를 사용하여 상호 작용 플러시 시기를 결정
+
+**ConversationSummaryBufferMemory**
+
+- 이 기억은 시간이 지남에 따라 대화의 요약을 생성
+
+**Vector data memory**
+
+- 대화 또는 다른 곳의 텍스트를 벡터 데이터베이스에 저장하고 가장 관련성이 높은 텍스트 블록을 검색
+
+**Entity memories**
+
+- LLM을 사용하여, 특정 엔터티에 대한 세부 정보를 기억
+
+<br/>
+
+### 6. Chains
+
+Chain은 일반적으로 LLM, **대규모 언어 모델을 프롬프트와 결합**하며, 이 빌딩 블록을 사용하면, 이러한 빌딩 블록을 함께 배치하여 텍스트나 기타 데이터에 대한 일련의 작업을 수행 가능
+
+#### SequentialChain
+
+한 체인의 출력이 다음 체인의 입력인 여러 체인을 결합
+
+1. SimpleSequencialChain : Single input/output
+2. SequentialChain : multiple inputs/outputs
+
+<img src="https://nbviewer.org/github/junji64/LangChain/blob/main/SC.PNG" alt="Image 3" style="zoom: 60%;" />
+
+
+
+#### Router Chain
+
+해당 입력이 정확히 무엇인지에 따라 **입력을 적절한 체인으로 라우팅** 
+
+<img src="https://nbviewer.org/github/junji64/LangChain/blob/main/RC.PNG" alt="Image 3" style="zoom: 60%;" />
+
+
+
+
+
+<br/>
+
+### 7. QnA over Documents
+
+**문서에 관한 질문에 답할 수 있는 시스템**
+
+PDF 파일이나 웹 페이지 또는 일부 회사의 인트라넷 내부 문서 컬렉션에서 추출된 텍스트가 주어지면, LLM을 사용하여 해당 문서의 내용에 대한 질문에 답하여 사용자가 더 깊이 이해하고 얻을 수 있도록 도울 수 있거나, **필요한 정보에 접근**
+**언어 모델을 원래 훈련되지 않은 데이터와 결합**하기 시작하기 때문에 정말 강력합
+
+<br/>
+
+#### Embedding
+
+임베딩은 텍스트 조각에 대한 숫자 표현 생성, **이 숫자 표현은 지나간 텍스트 조각의 의미를 포착**
+*유사한 내용을 가진 텍스트 조각은 유사한 벡터*를 가짐, 이를 통해 벡터 공간의 텍스트 조각을 비교
+
+<img src="https://nbviewer.org/github/junji64/LangChain/blob/main/Embedding-1.png" alt="Image 3" style="zoom: 100%;" />
+
+<img src="https://nbviewer.org/github/junji64/LangChain/blob/main/Embedding-2.png" alt="Image 3" style="zoom: 100%;" />
+
+
+
+#### Vector Database
+
+**터 데이터베이스**는 이전 단계에서 생성한 이러한 **벡터 표현을 저장**
+들어오는 문서에서 나오는 텍스트 덩어리로 채움 ->  큰 문서가 수신되면 먼저 이를 더 작은 덩어리
+
+<img src="https://nbviewer.org/github/junji64/LangChain/blob/main/VectorDB.png" alt="Image 3" style="zoom: 100%;" />
+
+
+
+<img src="https://nbviewer.org/github/junji64/LangChain/blob/main/VectorDB.png" alt="Image 3" style="zoom: 100%;" />
+
+<img src="https://nbviewer.org/github/junji64/LangChain/blob/main/VectorDB2.png" alt="Image 3" style="zoom: 80%;" />
+
+
+
+#### Other
+
+ **1. Map_reduce**: 모든 청크를 가져와 질문과 함께 언어 모델에 전달하고 응답을 받은 다음 다른 언어 모델 호출을 사용하여 **모든 개별 응답을 최종 답변으로 요약**
+
+- **개별 질문을 동시에 수행할 수 있기 때문에 매우 강력**
+
+- 하지만 **훨씬 더 많은 대화가 필요**
+
+  
+
+**2. Refine**: 많은 문서를 반복하는 데에도 사용. 
+
+- **이전 문서의 답변을 바탕으로 작성**, 이는 정보를 결합하고 시간이 지남에 따라 답변을 구축
+- **일반적으로 답변이 길어짐
+- ** **호출이 독립적이지 않기 때문에 속도 느림**.
+
+**3. Map_rerank**": 점수를 반환하도록 요청,  **가장 높은 점수를 선택**합니다. 
+
+- 모든 호출은 독립적
+
+<img src="https://nbviewer.org/github/junji64/LangChain/blob/main/Map.png" alt="Image 3" style="zoom: 80%;" />
+
+
+
+<br/>
+
+### 8. RAG

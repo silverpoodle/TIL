@@ -6,6 +6,8 @@
 - 메모리를 효율적으로 사용하며, 벡터화 연산을 지원
 - 선형대수, 푸리에 변환, 난수 생성 등 다양한 수학적 기능을 제공
 
+<br/>
+
 2. **배열 생성:**
 ```python
 import numpy as np
@@ -29,7 +31,10 @@ linspace = np.linspace(0, 1, 5)  # 0부터 1까지 5개의 균등 간격 숫자
 random_arr = np.random.rand(3, 3)  # 3x3 랜덤 배열
 ```
 
+<br/>
+
 3. **배열 연산:**
+
 ```python
 # 기본 연산
 a = np.array([1, 2, 3])
@@ -59,6 +64,8 @@ print(np.dot(d, e))  # 행렬 곱
 ```
 
 
+
+<br/>
 
 4. **리스트와 비교**
 
@@ -157,3 +164,110 @@ print(np.dot(d, e))  # 행렬 곱
      - 추가/삭제: insert(), remove()
 
      - len() 함수로 길이 확인
+
+
+<br/>
+
+5. **인덱싱과 슬라이싱**
+
+NumPy 배열의 인덱싱과 슬라이싱 방법을 자세히 설명해드리겠습니다:
+
+- 기본 인덱싱
+
+```python
+import numpy as np
+arr = np.array([1, 2, 3, 4, 5])
+
+# 단일 요소 접근
+print(arr[0])     # 1
+print(arr[-1])    # 5 (마지막 요소)
+
+# 다차원 배열 인덱싱
+arr_2d = np.array([[1, 2, 3],
+                   [4, 5, 6],
+                   [7, 8, 9]])
+                   
+print(arr_2d[0, 0])   # 1
+print(arr_2d[1, 2])   # 6
+```
+
+- 기본 슬라이싱
+
+```python
+arr = np.array([1, 2, 3, 4, 5, 6, 7, 8, 9, 10])
+
+# 시작:끝:간격
+print(arr[2:7])     # [3, 4, 5, 6, 7]
+print(arr[::2])     # [1, 3, 5, 7, 9]
+print(arr[1:8:2])   # [2, 4, 6, 8]
+print(arr[::-1])    # [10, 9, 8, 7, 6, 5, 4, 3, 2, 1]
+```
+
+- 다차원 배열 슬라이싱
+
+```python
+arr_2d = np.array([[1, 2, 3, 4],
+                   [5, 6, 7, 8],
+                   [9, 10, 11, 12]])
+
+# 행, 열 슬라이싱
+print(arr_2d[0:2, 1:3])    # [[2, 3],
+                           #  [6, 7]]
+
+# 모든 행의 특정 열 선택
+print(arr_2d[:, 1])        # [2, 6, 10]
+
+# 특정 행의 모든 열 선택
+print(arr_2d[1, :])        # [5, 6, 7, 8]
+```
+
+- 불리언 인덱싱
+
+```python
+arr = np.array([1, 2, 3, 4, 5])
+
+# 조건에 맞는 요소 선택
+print(arr > 3)             # [False False False True True]
+print(arr[arr > 3])        # [4, 5]
+
+# 복합 조건
+print(arr[(arr > 2) & (arr < 5)])  # [3, 4]
+```
+
+- 팬시 인덱싱
+
+```python
+arr = np.array([10, 20, 30, 40, 50])
+
+# 인덱스 배열을 사용한 선택
+indices = [1, 3, 4]
+print(arr[indices])        # [20, 40, 50]
+
+# 2차원 예시
+arr_2d = np.array([[1, 2, 3],
+                   [4, 5, 6],
+                   [7, 8, 9]])
+                   
+rows = [0, 2]
+cols = [0, 2]
+print(arr_2d[rows, cols])  # [1, 9]
+```
+
+- 뷰와 복사
+
+```python
+arr = np.array([1, 2, 3, 4, 5])
+
+# 뷰 생성 (원본 데이터 공유)
+view = arr[1:4]
+view[0] = 10
+print(arr)  # [1, 10, 3, 4, 5]
+
+# 복사 생성 (독립적인 데이터)
+copy = arr[1:4].copy()
+copy[0] = 20
+print(arr)  # [1, 10, 3, 4, 5] (원본 변경되지 않음)
+```
+
+
+

@@ -206,7 +206,7 @@
 
 예술, 음악, 소프트웨어 코드, 글쓰기 등 새롭고 독창적인 콘텐츠를 만들 수 있는 인공 지능의 한 분야는 생성형 AI가 맞나요?
 
-참 ![정답](https://learn.hansung.ac.kr/theme/image.php?theme=coursemosv2&component=core&rev=1729803602&image=i%2Fgrade_correct)
+참
 
 
 
@@ -214,7 +214,7 @@
 
 기존 데이터의 학습된 확률 분포를 기반으로 새로운 데이터 인스턴스를 생성하는 것은 생성 모델이 맞나요?
 
-참 ![정답](https://learn.hansung.ac.kr/theme/image.php?theme=coursemosv2&component=core&rev=1729803602&image=i%2Fgrade_correct)
+참 
 
 
 
@@ -222,7 +222,7 @@
 
 생성형 AI 모델에서 생성된 단어 또는 문구가 말이 안되거나 문법적으로 잘못된 경우를 의미하는 것은 할루시네이션이 맞나요?
 
-참 ![정답](https://learn.hansung.ac.kr/theme/image.php?theme=coursemosv2&component=core&rev=1729803602&image=i%2Fgrade_correct)
+참 
 
 
 

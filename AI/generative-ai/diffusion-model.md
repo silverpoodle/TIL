@@ -132,6 +132,6 @@ forward
 
 ###문제 3
 
-역으로 노이즈를 제거하는 단계는 무슨 Processs인가요?
+조역으로 노이즈를 제거하는 단계는 무슨 Processs인가요?
 
 reverse

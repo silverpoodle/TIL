@@ -128,7 +128,7 @@ DB -> Search Engine -> Web 2.0 -> Big Data -> Context-Aware
 ### 3. Data Mining
 
 - 대규모로 저장된 데이터 안에서 체계적이고 자동 적으로 통계적 규칙이나 패턴을 찾아냄
-- KDD(데이터베이스 속의 지식 발견, knowledgediscovery in databases)
+- **KDD**(데이터베이스 속의 지식 발견, knowledgediscovery in databases)
 - 통계학에서 패턴 인식에 이르는 다양한 계량 기 법을 사용
 - 적용 분야
   - **분류(Classification)**

@@ -55,12 +55,12 @@
 
    - 정확히 원하는 출력은 아니지만 비슷하거나 일부 정보만 가진 레이블 사용
 
-   <img src="https://ietresearch.onlinelibrary.wiley.com/cms/asset/a035d68d-8ea1-47b7-bebc-7a5d3e87f3c1/cit212216-fig-0002-m.png" alt="hi" style="zoom:70%;" />
+   <img src="https://velog.velcdn.com/images/kyyle/post/45f74c0e-3d92-4cf2-911c-ea230fe1ef49/image.png" alt="hi" style="zoom:50%;" />
    <br/>
 
 4. **강화 학습 (Reinforcement)**
 
-   - 상벌 패러다임을 통해 각 작업의 피드백을 배우며 결과 도출
+   - *상벌 패러다임*을 통해 각 작업의 피드백을 배우며 결과 도출
    - 정책 학습 (Policy Learning)
 
    <img src="https://www.ibm.com/content/dam/connectedassets-adobe-cms/worldwide-content/creative-assets/s-migr/ul/g/8f/5e/reinforcement-learning-figure-1.png" alt="te" style="zoom:15%;" />
@@ -91,14 +91,117 @@
      > 2. 모델/주행 거리 등 데이터 기반 중고차 가격 모델 예측
      > 3. 주식 가치 예측 시스템
 
-   - 시계열 데이터 (Time Series): 
-   - 포캐스팅 (Forecasting): 
-
    <img src="https://miro.medium.com/v2/resize:fit:786/format:webp/1*W0YUVkHgI8KTKW1I8FLgEg.png" alt="vs" style="zoom:50%;" />
+
+   - 시계열 데이터 (Time Series): 여러 개의 과거의 데이터 포인트들
+   - 포캐스팅 (Forecasting): 일련의 연속된 데이터 포인트들
+   - 이상치 탐지 (Anomaly Detection): 일반적이지 않은 데이터 감지
+   - 특성 선택(Feature Selection) 과 특성 공학 (Feature Engineering) 을 통한 예측 성능 향상
+
    <br/>
 
 3. **지식 추출 (Knowledge Extraction)**
 
+   - 구조적 데이터 (Structured Data): *테이블* 형태로 저장
+   - 비구조적 데이터 (Unstructured Data): 기타 데이터셋 (텍스트, 음악, 비디오 ..)
+     - 비구조적 데이터 → 구조를 추출
+
+   <img src="https://lawtomated.com/wp-content/uploads/2019/04/structuredVsUnstructuredIgneos.png" alt="db" style="zoom:25%;" />
+
+   <br/>
+
+   - 이미지 지식 추출
+
+     - 객체 탐지 (Object Detection): Bounding Box 를 그리는 접근
+
+     - 이미지 분할 (Image Segmentation): 이미지의 각 픽셀을 하나의 범주에 할당
+
+       <img src="https://miro.medium.com/v2/resize:fit:640/1*pWoHu_uUDebBSSNmyMydLQ.png" alt="img" style="zoom:67%;" />
+
+       <br/>
+
 4. **카탈로그 구성 (Catalog Organization)**
 
+   - 사용자에게 보여줄 *출력의 집합* 생성
+
+     - 쇼핑몰에서 사용자가 관심을 보인 아이템과 관련된 제품 추천
+     - 텍스트 입력/사진 입력을 통한 검색
+
+   - 협업 추천 시스템 (Collaborative Recommendation System)
+
+     <img src="https://miro.medium.com/v2/resize:fit:649/1*Z8p9PAqx2dFfEn76B6juAw.png" alt="t" style="zoom:50%;" />
+
+   - 콘텐츠 기반 추천 시스템 (Content-Based Recommendation System)
+
+     <img src="https://miro.medium.com/v2/resize:fit:792/1*P63ZaFHlssabl34XbJgong.jpeg" alt="d" style="zoom:35%;" />
+
+     <br/>
+
 5. **생성 모델 (Generative Model)**
+
+   - 사용자 입력에 따라 새로운 데이터 생성
+   - 다양한 형태의 출력 생성
+   - 출력에 대한 제한이 적기 때문에 제품 시스템에 적합하지 않음
+     - 번역, 요약, 자막 생성, 이미지 생성 등
+
+
+
+<br/>
+
+### DATA
+
+1. **데이터 타입**
+   - *입력을 출력에 매핑*하는 것 = `욕구의 단계 (Hierarchy of Needs)`
+     - 정확히 찾으려는 매핑 데이터를 구하는 것
+2. **데이터 가용성 (Data Availability)**
+   - 레이블된 데이터셋: 예측하려는 타깃 값이 포함
+   - 유사 레이블 데이터셋: 예측하려는 타깃과 연관된 레이블이 포함
+   - 레이블 없는 데이터셋: 입력과 출력을 매핑할 레이블된 데이터셋 없음.
+     - `직접 레이블` or `레이블 필요 없는 모델 사용`
+   - 데이터가 아예 없음ㅋ (수집해야함): 힝.
+
+<br/>
+
+### PRACTICE
+
+> 💡**더 나은 질문을 하도록 돕는 에디터를 만들어보자!**
+
+1. **WHAT?**
+
+   - 나쁜 질문💩 → 모델 → 좋은 질문🩵
+
+     - 하나의 모델로 입력 → 출력 (END-TO-END Framework)
+
+   - 데이터셋 구하기
+
+     - 나쁜질문 + 좋은질문 데이터셋 존재 ❌
+     - 직접 만들 돈 없다~ 💸
+
+   - 모델 정하기
+
+     - 문장 매핑 → *생성형 모델* (Sequence - to - Sequence = AutoRegressive Model)
+       - 앞서 출력한 단어를 다음 출력을 만드는데 사용, 단순한 모델보다 훈련/추론 느림
+       - 빠르게 실행될수 있도록 추가적인 엔지니어링 작업 필요
+     - 많은 모델 파라미터 사용 → 훈련 속도 느림 → 재훈련 필요할 시 issue
+       - 복잡도가 커지면 파이프라인 구축 시간 오래걸림, 유지보수 작업 늘어남
+       - 간단하고 잘 이해할 수 있는 모델 선택 필요
+
+     <br/>
+
+2. **HOW?**
+
+   - **알고리즘을 구현하기 전에 *알고리즘이 되어보자***! ~~(뭔말이야;;;;;)~~
+     - 문제에 대한 최선의 자동화 방법을 이해하기 위해 *수동으로* 작업 해결 시도
+       1. `데이터 없이` 사전 지식으로 텍스트 수정 유도
+          ex. 신문기사 작성 가이드 참고, 편집자 tip
+       2. 데이터셋에서 `개별 샘플과 트렌드`를 확인하고 모델링 전략에 활용
+       3. 기존 연구를 통해 명확하게 글을 쓰는데 도움이 되는 몇 가지 속성 확인, 솔루션 제공
+          - 단순한 문장
+          - 어조
+          - 구조적 특징
+   - ***경험*에서 배워보자!**
+     - 데이터셋을 모으고, 특성을 추출하고, 분류기 훈련
+       1. 데이터셋
+       2. 모델: 성능이 높은가? and 샘플을 분류하는데 사용되는 속성을 확인할 수 있는가?
+       3. 응답 속도
+       4. 구현의 용이성

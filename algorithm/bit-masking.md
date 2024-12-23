@@ -36,31 +36,46 @@ using namespace std;
 
 // 기본적인 비트 연산자
 // & (AND), | (OR), ^ (XOR), ~ (NOT), << (left shift), >> (right shift)
+// shift = a의 모든 비트를 왼쪽 / 오른쪽으로 b칸 만큼 이동
+
+// 1      = 00000001  (1)
+// 1 << 1 = 00000010  (2)
+// 1 << 2 = 00000100  (4)
+// 1 << 3 = 00001000  (8)
+// 1 << 4 = 00010000  (16)
 
 void bitOperations() {
     // 비트 집합 표현
-    int state = 0;              // 공집합
+    int state = 0;              // 공집합 
+      cout << bitset<8>(state) << endl; //[0000 0000]
     
     // 원소 추가 (i번째 비트를 1로)
     int i = 3;
     state |= (1 << i);         // 3번째 비트 켜기
+     cout << bitset<8>(state) << endl; // [0000 1000]
     
     // 원소 제거
-    state &= ~(1 << i);        // 3번째 비트 끄기
+    state &= ~(1 << i);        // 3번째 비트 끄기 
+    cout << bitset<8>(state) << endl; //[0000 0000]
     
     // 원소 존재 여부 확인
     if (state & (1 << i))
-        cout << i << "번째 비트가 켜져있음" << endl;
+        cout << i << endl;
+    else
+        cout << i << endl; // [3]
         
     // 원소 토글 (0->1, 1->0)
     state ^= (1 << i);
+    cout << bitset<8>(state) << endl; //[0000 1000]
     
     // 가장 낮은 켜져있는 비트 찾기
     int lowest_bit = (state & -state);
+    cout << bitset<8>(lowest_bit) << endl; //[0000 1000]
     
     // 전체 집합
-    int n = 10;
+    int n = 4;
     int full = (1 << n) - 1;   // n개의 비트가 모두 1인 수
+    cout << bitset<8>(full) << endl; // [0000 1111]
 }
 ```
 

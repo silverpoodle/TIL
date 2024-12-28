@@ -1,6 +1,6 @@
-### Database 란
+# Database 
 
----
+## 1. 데이터베이스란?
 
 **특정 조직의 업무를 수행하는 데 필요한 상호 관련된 데이터들의 집합**
 
@@ -13,15 +13,13 @@
 
 ​                                        
 
-​                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  
+​         <br/>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         
 
-### 데이터베이스 언어(SQL)
-
----
+## 2. 데이터베이스 언어(SQL)
 
 **데이터베이스에서 데이터를 추출하고 조작하는 데에 사용하는 데이터 처리 언어**
 
-#### DML (Data Manipulation Language) - 데이터베이스에 들어 있는 데이터를 조회하거나 검색하기 위한 명령어
+#### 2.1 DML (Data Manipulation Language) - 데이터베이스에 들어 있는 데이터를 조회하거나 검색하기 위한 명령어
 
 - select
 
@@ -35,7 +33,7 @@
 
 - delete
 
-#### DDL (Data Definition Language) - 데이터 구조와 관련된 명령어
+#### 2.2 DDL (Data Definition Language) - 데이터 구조와 관련된 명령어
 
 - create
 - alter
@@ -43,24 +41,20 @@
 - truncate
 - rename
 
-#### DCL (Data Control Language) - 데이터베이스에 접근하고 객체들을 사용하도록 권한을 주고 회수하는 명령어
+#### 2.3 DCL (Data Control Language) - 데이터베이스에 접근하고 객체들을 사용하도록 권한을 주고 회수하는 명령어
 
 - grant
 - revoke
 
-#### TCL (Transaction Control Language) - DML에 의해 조작된 결과를 작업단위 별로 제어하는 명령어
+#### 2.4 TCL (Transaction Control Language) - DML에 의해 조작된 결과를 작업단위 별로 제어하는 명령어
 
 - commit
 - rollback
 - savepoint
 
+<br/>
 
-
-
-
-### RDBMS?  NoSQL?
-
----
+## 3. RDBMS?  NoSQL?
 
 | 종류                                                   | 설명                                                         | 장점                                                         | 단점                                                         | 상황                                                         |
 | ------------------------------------------------------ | ------------------------------------------------------------ | ------------------------------------------------------------ | ------------------------------------------------------------ | ------------------------------------------------------------ |
@@ -69,11 +63,9 @@
 
 
 
+<br/>
 
-
-#### 무결성 제약조건(Integrity Constraint)
-
----
+## 4. 무결성 제약조건(Integrity Constraint)
 
 **데이터의 내용이 서로 모순되는 일이 없고, 데이터베이스에 걸린 제약을 완전히 만족하게 되는 성질**
 
@@ -87,11 +79,9 @@
 
 
 
+<br/>
 
-
-#### 키(key)
-
----
+## 5. 키(key)
 
 <img src="https://velog.velcdn.com/images%2Fchappi%2Fpost%2F90d2823d-9869-4f0a-ab36-a70c20f3fbae%2F1-2.png" alt="img" style="zoom:80%;" />
 

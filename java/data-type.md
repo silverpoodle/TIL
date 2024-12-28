@@ -1,4 +1,4 @@
-### Primitive Type
+## 1. Primitive Type
 
 | 타입      | 설명                                 | 크기(bit) | 범위                                             |
 | --------- | ------------------------------------ | --------- | ------------------------------------------------ |
@@ -17,21 +17,21 @@
 
 
 
-
-
-### Reference Type
+## 2. Reference Type
 
 `기본형 8종류를 제외한 모든 데이터 유형`
 
 
 
-#### Class Type
+## 3. Class Type
 
 **객체를 참조하는 형태**
 
 
 
-#### String Type
+
+
+## 4. String Type
 
 **자바에서 구현된 클래스**  
 
@@ -45,7 +45,7 @@
 
 
 
-#### Wrapper Class
+## 5. Wrapper Class
 
 **기본형을 클래스로 감싼 형태의 객체이기에 `null`이 선언 가능**
 
@@ -62,7 +62,9 @@
 
 
 
-#### Interface Type
+
+
+## 6. Interface Type
 
 - 인터페이스를 만들게 되면 새로운 참조 자료형을 만드는 것과 같음. 
 - 인터페이스도 자료형이기 때문에 자료형으로써 자신을 구현한 객체의 주소를 가질 수 있음
@@ -70,7 +72,7 @@
 
 
 
-#### Array Type
+## 7. Array Type
 
 ```java
 int[] num1 = new int[2]; //기본형 배열 선언
@@ -81,7 +83,7 @@ Integer[] num2 = new Integer[3]; // 참조형 배열 선언
 
 
 
-#### Enum Type
+## 8. Enum Type
 
 `enum(열거형)이란, 복수의 정수를 한꺼번에 다루기 위한 데이터 형식`
 

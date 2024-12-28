@@ -1,6 +1,4 @@
-### OSI(Open System Interconnection) 7계층
-
----
+# OSI(Open System Interconnection) 7계층
 
 **ISO(International Standardization Organization)에서 개발한 컴퓨터 네트워크 프로토콜 디자인과 통신을 계층으로 나누어 설명한 개방형 시스템 상호 연결 모델**
 

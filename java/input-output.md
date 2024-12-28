@@ -113,20 +113,18 @@ sb.subString(int start, int end) // start와 end 사이의 값을 잘라옴.
 
 #### 참고
 
-```json
 String은 불변 속성을 갖고, StringBuffer/StringBuilder는 그렇지 않다.
 
-불변성:
+**불변성:**
 concat이나 +  연산을 통해 값을 변경하게 되면 원래 기존의 String 메모리에서 값이 바뀌는 것이 아니라
 기존의 String에 들어있던 값을 버리고 새로운 값을 재할당하게 된다.
 처음에 할당한 String의 메모리 영역은 Garbage로 남아있다가 GarbageCollection에 의해 없어진다.
 
-String은 불변성을 가지기 때문에 변하지 않는 문자열을 자주 읽어들이는 경우 사용하면 유리하다. 
-하지만 문자열 추가, 삭제, 수정 등의 연산이 자주 일어나는 경우에 String을 사용하면, 힙 메모리에 많은 Garbage가 생성되고, 이는 힙 메모리 부족으로 이어져 프로그램의 성능에 치명적 영향을 미칠 수 있다.
-
-가변성:
+**가변성:**
 .append() , .delete()등 동일 객체 내에서 문자열을 변경하는 것이 가능하다. 
 그렇게 때문에 문자열의 추가, 수정, 삭제가 빈번하게 발생할 경우 더욱 유리하다.
-```
+
+String은 불변성을 가지기 때문에 변하지 않는 문자열을 자주 읽어들이는 경우 사용하면 유리하다. 
+하지만 문자열 추가, 삭제, 수정 등의 연산이 자주 일어나는 경우에 String을 사용하면, 힙 메모리에 많은 Garbage가 생성되고, 이는 힙 메모리 부족으로 이어져 프로그램의 성능에 치명적 영향을 미칠 수 있다.
 
 <img src="https://blog.kakaocdn.net/dn/cog8fW/btq0c2EzgQF/Hmr8Fz7qEY0XkXOs0VNQsk/img.png" alt="img" style="zoom:60%;" />

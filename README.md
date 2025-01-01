@@ -32,8 +32,10 @@
 
 ## Computer Science
 
-- [알고리즘(Algorithm)]()
+- [알고리즘(Algorithm)](https://github.com/silverpoodle/TIL/tree/main/computer-science/algorithm)
 - [컴파일러 (Compiler)](https://github.com/silverpoodle/TIL/tree/main/computer-science/compiler)
+- [데이터 구조 (Data Structure)](https://github.com/silverpoodle/TIL/tree/main/computer-science/data-structure)
+- 
 
 <br/>
 

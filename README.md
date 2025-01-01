@@ -13,11 +13,11 @@
 ## Contents
 
 - [AI](#AI)
-- [Computer Science](#Computer Science)
+- [Computer Science](#Computer-Science)
 - [Database](#Database)
 - [Java](#Java)
 - [Spring](#Spring)
-- [Open Source Software](#Open Source Software)
+- [Open Source Software](#Open-Source-Software)
 - [Security](#Security)
 - 
 
@@ -32,7 +32,7 @@
 
 <br/>
 
-## Computer Science
+## Computer-Science
 
 - [네트워크 (Network)](https://github.com/silverpoodle/TIL/tree/main/computer-science/network)
 - [알고리즘(Algorithm)](https://github.com/silverpoodle/TIL/tree/main/computer-science/algorithm)
@@ -86,7 +86,7 @@
 
 <br/>
 
-## Open Source Software
+## Open-Source-Software
 
 - [Git](https://github.com/silverpoodle/TIL/tree/main/open-source-software/git)
 - [Linux](https://github.com/silverpoodle/TIL/tree/main/open-source-software/linux)

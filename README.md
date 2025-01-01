@@ -3,7 +3,7 @@
 <br/>
 
 <div align="center">
-  
+
 [![Hits](https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https%3A%2F%2Fgithub.com%2Fsilverpoodle%2FTIL&count_bg=%236D6B72&title_bg=%23FF90C8&icon=&icon_color=%23FF90C8&title=Hello%21&edge_flat=false)](https://hits.seeyoufarm.com)
 </div>
 
@@ -12,6 +12,7 @@
 
 ## Contents
 
+- [AI](#AI)
 - [Java](#Java)
 - [Database](#Database)
 - [Spring](#Spring)
@@ -21,6 +22,20 @@
 
 <br/><br/><br/>
 
+## AI
+
+- [빅데이터 (Big Data)](https://github.com/silverpoodle/TIL/tree/main/AI/big-data)
+- [생성형 AI (Generative AI)](https://github.com/silverpoodle/TIL/tree/main/AI/generative-ai)
+- [[BOOK] Machine Learning Powered Application](https://github.com/silverpoodle/TIL/tree/main/AI/machine-learning-powered-application)
+
+<br/>
+
+## Computer Science
+
+- [알고리즘(Algorithm)]()
+- [컴파일러 (Compiler)](https://github.com/silverpoodle/TIL/tree/main/computer-science/compiler)
+
+<br/>
 
 ## Java
 

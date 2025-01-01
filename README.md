@@ -15,9 +15,7 @@
 - [AI](#AI)
 - [Java](#Java)
 - [Database](#Database)
-- [Spring](#Spring)
-- [JPA](#JPA)
-- [MyBatis](#MyBatis)
+- 
 - 
 
 <br/><br/><br/>
@@ -39,16 +37,9 @@
 
 <br/>
 
-## Java
+## Database
 
-- [클래스, 객체, 인스턴스(Class, Data, Instance)](https://github.com/silverpoodle/TIL/blob/main/java/class-object-instance.md)
-- [반복문 (Iteration)](https://github.com/silverpoodle/TIL/blob/main/java/iteration.md)
-- [java.Util](https://github.com/silverpoodle/TIL/blob/main/java/util.md)
-- [데이터타입 (Data Type)](https://github.com/silverpoodle/TIL/blob/main/java/data-type.md)
-- [실행 과정 (Java Execution)](https://github.com/silverpoodle/TIL/blob/main/java/excecution.md)
-- [입출력 (Input-Output)](https://github.com/silverpoodle/TIL/blob/main/java/input-output.md)
-- [오버로딩, 오버라이딩 (Overload, Override)](https://github.com/silverpoodle/TIL/blob/main/java/overload-overide.md)
-- [영속성 컨텍스트, 캐시 (Persistence Context, Cache)](https://github.com/silverpoodle/TIL/blob/main/java/persistence-context.md)
+- 
 
 <br/>
 

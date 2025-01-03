@@ -1,4 +1,6 @@
-## 1️⃣ JWT란?
+# JWT
+
+## 1. JWT란?
 
 ![image-20240210165542994](https://raw.githubusercontent.com/silverpoodle/TIL/main/images/image-20240210165542994.png)
 
@@ -8,6 +10,8 @@
 
 JSON Web Token (JWT)은 웹에서 정보를 안전하게 전송하기 위한 표준 방식 중 하나로, 데이터를 JSON 객체로 표현하고 서명하여 전송하는 토큰 기반의 인증 방식이다. JWT는 클라이언트와 서버 간의 정보 교환에 사용되며, 특히 사용자 인증 및 권한 부여에 많이 활용된다.
 
+<br/>
+
 ### 1-2. **JWT의 주요 특징**
 
 1. 가볍고 간결한 형식 **:** JWT는 JSON 기반으로 되어 있어 가독성이 높고 간결한 형식을 가지고 있다.
@@ -15,15 +19,19 @@ JSON Web Token (JWT)은 웹에서 정보를 안전하게 전송하기 위한 표
 3. 비상태성(Stateless) : JWT는 상태를 저장하지 않는 인증 방식이다. 서버는 사용자의 상태를 유지하지 않고, 클라이언트가 요청을 보낼 때마다 JWT를 통해 사용자를 식별한다.
 4. 간단한 전송 **:** JWT는 HTTP와 URL을 통해 쉽게 전송될 수 있다. Base64 인코딩된 형태로 구성되어 있어 URL 파라미터나 HTTP 헤더에 포함하여 전송이 가능하다.
 
+<br/>
+
 ### 1-3. **JWT의 활용 목적**
 
 1. **인증 :** JWT는 사용자 인증에 주로 사용된다. 사용자가 로그인하면, 서버는 사용자에게 JWT를 발행하고, 사용자는 이후 요청마다 이 토큰을 헤더에 포함시켜 인증 정보를 제공한다.
 2. **정보 교환:** JWT는 클라이언트와 서버 간의 정보를 안전하게 교환하는 데에 사용된다. 토큰이 서명되어 있기 때문에 변조가 어렵다. 정보는 JWT 내에 저장되며, 시그니처를 통해 정보의 무결성이 보장된다.
 3. **권한 부여(Authorization) :** JWT는 사용자가 특정 리소스에 대한 접근 권한을 가지고 있는지를 확인하는 데 사용된다. 토큰 내의 클레임을 통해 사용자의 권한을 판단할 수 있다.
 
+<br/>
 
 
-## 2️⃣ JWT의 구조
+
+## 2. JWT의 구조
 
 <img src="https://raw.githubusercontent.com/silverpoodle/TIL/main/images/image-20240210165609679.png" alt="image-20240210165609679" style="zoom:80%;" />
 
@@ -67,13 +75,15 @@ JWT는 세 가지 부분으로 이루어져 있다. 각 부분은 `Base64`로 �
 
    이렇게 생성된 시그니처는 토큰의 마지막 부분에 추가되며, 이를 통해 토큰이 변조되지 않았음을 확인할 수 있다.
 
+<br/>
 
-
-## 3️⃣ **JWT의 생성과 전송, 검증 과정**
+## 3. JWT의 생성과 전송, 검증 과정
 
 ### 3-1. 웹 앱에서 사용자 인증
 
 먼저 사용자가 웹 애플리케이션에 로그인 요청을 보낸다. 이 요청은 보통 사용자의 아이디와 비밀번호를 포함한다.
+
+<br/>
 
 ### 3-2. JWT 토큰 생성
 
@@ -120,6 +130,8 @@ JWT는 세 가지 부분으로 이루어져 있다. 각 부분은 `Base64`로 �
    eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiAiMTIzNDU2Nzg5MCIsICJuYW1lIjogIkpvaG4gRG9lIiwgImlhdCI6IDE1MTYyMzkwMjJ9.SflKxwRJSMeKKF2QT4fwpMeJf36POk6yJV_adQssw5c
    ```
 
+<br/>
+
 ### 3-3. JWT 토큰 전송
 
 클라이언트는 서버에 요청을 보낼 때마다 HTTP 헤더에 저장해둔 JWT 토큰을 첨부한다.
@@ -131,6 +143,8 @@ JWT는 세 가지 부분으로 이루어져 있다. 각 부분은 `Base64`로 �
     ```scss
     Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiAiMTIzNDU2Nzg5MCIsICJuYW1lIjogIkpvaG4gRG9lIiwgImlhdCI6IDE1MTYyMzkwMjJ9.SflKxwRJSMeKKF2QT4fwpMeJf36POk6yJV_adQssw5c
     ```
+
+<br/>
 
 ### 3-4. JWT 토큰 검증
 
@@ -148,7 +162,7 @@ JWT는 세 가지 부분으로 이루어져 있다. 각 부분은 `Base64`로 �
 
 
 
-## 4️⃣ Access Token과 Refresh Token
+## 4. Access Token과 Refresh Token
 
 JWT에 대해 찾아보면 Access Token과 Refresh Token에 대한 얘기가 꼭 함께 나온다. **Access Token과 Refresh Token은 JWT를 사용하는 구체적인 인증 토큰의 예시라고 할 수 있다.** 그렇다면 Access Token과 Refresh Token은 뭘까?
 
@@ -156,15 +170,21 @@ JWT에 대해 찾아보면 Access Token과 Refresh Token에 대한 얘기가 꼭
 
 Access Token은 사용자의 인증 정보를 담은 토큰으로, 주로 사용자가 서버에 요청을 보낼 때 해당 사용자를 인증하는 데 사용된다. 즉, 사용자가 자신이 누구인지 증명하는 수단이다.
 
+<br/>
+
 ### 4-2. Refresh Token이란?
 
-Refresh Token은 Access Token을 재발급 받을 수 있는 권한을 부여하는 토큰이다. Access Token이 만료되었을 경우, 사용자는 Refresh Token을 이용해 새로운 Access Token을 받아 인증을 유지할 수 있다.
+Refresh Token은 ***Access Token을 재발급 받을 수 있는 권한을 부여하는 토큰***이다. Access Token이 만료되었을 경우, 사용자는 Refresh Token을 이용해 새로운 Access Token을 받아 인증을 유지할 수 있다.
+
+<br/>
 
 ### 4-3. Access Token과 Refresh Token의 차이점
 
-Access Token과 Refresh Token은 모두 사용자 인증에 사용되는 토큰이지만, 그 목적과 수명, 그리고 사용 방식 등에서 차이가 있다.
+Access Token과 Refresh Token은 모두 사용자 인증에 사용되는 토큰이지만, 그 **목적과 수명, 그리고 사용 방식** 등에서 차이가 있다.
 
 Access Token은 일정 시간 후에 만료되며, 만료 시간은 일반적으로 짧게 설정된다. 이렇게 하면, 토큰이 탈취되더라도 공격자가 제한된 시간 동안만 사용할 수 있다. 일반적으로 클라이언트 측에 저장되며 서버에 요청을 보낼 떄마다 이 토큰을 함께 보내게 된다. 웹 브라우저에서는 HTTP Only 쿠키, Local Storage, Session Storage 등을 사용해 Access 토큰을 저장할 수 있다. 그러나 이 중 HTTP Only 쿠키를 사용하는 것이 XSS 공격으로부터 토큰을 보호하는 데 가장 효과적이다.
+
+<br/>
 
 ❓ **HTTP only 쿠키란?**
 
@@ -183,9 +203,9 @@ HTTP Only 속성이 설정된 쿠키는 웹 서버와 웹 브라우저 간에 HT
 
 <img src="https://raw.githubusercontent.com/silverpoodle/TIL/main/images/image-20240210165657899.png" alt="image-20240210165657899" style="zoom:67%;" />
 
+<br/>
 
-
-## 5️⃣ JWT의 보안
+## 5.  JWT의 보안
 
 JWT는 웹 애플리케이션에서 인증과 인가를 처리하는 데에 유용한 도구이지만, 그 자체가 완벽하게 안전한 방법이라고 볼 수는 없다. 예를 들어, 토큰 유출은 JWT의 주요 취약점 중 하나이다. JWT는 클라이언트 측에 저장되고, HTTP 헤더를 통해 전송되므로, 토큰이 유출되면 해당 토큰을 이용하여 서버에 무단으로 접근할 수 있다. 따라서 JWT를 사용할 때에는 항상 보안에 신경 써야 한다.
 
@@ -209,6 +229,8 @@ JWT는 웹 애플리케이션에서 인증과 인가를 처리하는 데에 유�
 
   - JWT를 쿠키에 저장하면 CSRF 공격의 위험도 있다. CSRF 공격은 공격자가 사용자를 속여 사용자의 권한으로 웹사이트의 기능을 실행하게 만드는 공격이다. JWT가 쿠키에 저장되어 있으면, 공격자는 사용자를 속여 웹사이트에 요청을 보낼 수 있고, 이 요청에는 사용자의 JWT가 포함되어있기 때문에 서버는 이 요청을 사용자 본인이 보낸 것처럼 인식하게 된다. 결과적으로 공격자는 사용자의 권한을 도용하여 웹사이트의 기능을 실행할 수 있게 된다.
 
+<br/>
+
 ### 5-2. JWT 보안 강화 방법
 
 1. 알고리즘 선택
@@ -220,7 +242,9 @@ JWT는 웹 애플리케이션에서 인증과 인가를 처리하는 데에 유�
 4. HTTPS 사용
    - JWT를 전송할 때는 HTTPS를 사용하여 통신을 암호화하는 것이 중요하다. 암호화되지 않은 통신은 중간자 공격 등에 취약할 수 있다.
 
-## 6️⃣ JWT와 관련된 표준 및 규격
+<br/>
+
+## 6. JWT와 관련된 표준 및 규격
 
 이제 JWT와 관련된 두 가지 중요한 표준, 즉 OAuth와 OpenID Connect에 대해 살펴보자. 이 두 표준 규격은 JWT를 활용해서 사용자의 인증 정보와 권한을 표현한다. OAuth와 OpenID Connect는 각각 서로 다른 목적과 기능을 가지고 있지만, 둘 다 사용자 인증 및 인가에 있어서 중요한 역할을 한다.
 
@@ -234,6 +258,8 @@ JWT는 웹 애플리케이션에서 인증과 인가를 처리하는 데에 유�
    - OpenID Connect은 OAuth 2.0 기반으로 작동하는 사용자의 디지털 ID를 제공하고 관리하기 위한 프로토콜이다. JWT를 사용하여 사용자 정보를 전달하고, 인증 및 권한을 제공한다.
    - 웹 및 모바일 애플리케이션에서 사용자를 식별하고, 인증 및 권한을 관리하는 데 사용된다.
    - **사용자 인증을 위한 ID 토큰으로 JWT를 활용한다. 이 ID 토큰에는 사용자를 식별할 수 있는 정보가 들어있고, 이를 통해 사용자가 누구인지를 신뢰할 수 있게 해준다.**
+   
+   <br/>
 
 ### OAuth와 OpenID Connect의 차이점
 

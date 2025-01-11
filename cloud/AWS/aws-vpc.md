@@ -189,3 +189,16 @@ CIDR 블록 형식: `IP 주소/서브넷 마스크`
 서브넷 연결된 EC2 인스턴스 (혹은 다른 리소스)
 ```
 
+
+
+<br/>
+
+## 6. 거지핑.. VPC SSH 연결로 IPv4 비용을 줄여보자..;;
+
+<img src="https://github.com/silverpoodle/typora-images/blob/main/image-20250109160255105.png?raw=true" alt="image-20250109160255105" style="zoom:60%;" />
+
+난.. 0.02 달러도 무서운.. 거지거지거지핑...
+
+<img src="https://github.com/silverpoodle/typora-images/blob/main/image-20250109171258274.png?raw=true" alt="image-20250109171258274" style="zoom:50%;" />
+
+<img src="https://github.com/silverpoodle/typora-images/blob/main/image-20250109184343149.png?raw=true" alt="image-20250109184343149" style="zoom:50%;" />

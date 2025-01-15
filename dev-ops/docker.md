@@ -126,6 +126,30 @@
 
 ## 4. 도커 이미지 (Docker Image)
 
+<img src="https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2Fi0gskxs7q2ztag0e222p.png" alt="docker" style="zoom:67%;" />
+
+#### 도커 이미지는 컨테이너의 실행 환경을 정의하며, 애플리케이션 실행에 필요한 파일, 라이브러리, 설정 등을 포함
+
+- **Layered Architecture**
+
+  <img src="https://junhyunny.github.io/images/docker-file-build-and-image-layer-1.JPG" alt="l" style="zoom:67%;" />
+
+  - Dockerfile의 각 명령어(instruction)가 이미지를 구성하기 위한 레이어
+  - 각 레이어들은 독립적으로 저장되며 `읽기 전용(read only)`이기 때문에 수정이 불가능
+  - 각 새로운 레이어가 이전 레이어의 내용을 상속받는 방식으로 동작
+  - 재사용을 염두에 두고 설계, 여러 이미지에서 동일한 레이어를 공유할 수 있으므로 디스크 공간을 절약
+  - 각 레이어는 최종 이미지 크기에 영향, **멀티 스테이지 빌드(Multi-Stage Build)**로 레이어 수 줄이는 선택지
+
+- **Immutability**
+
+  - 도커 이미지는 수정할 수 없으며, 변경이 필요할 경우 새 이미지를 생성
+  - 안정적이고 재현 가능한 실행 환경 제공
+
+- **LightWeight**
+
+  - *불필요한 운영체제 요소를 제거*하여 크기를 최소화
+  - *애플리케이션과 의존성만 포함*, VM에 비해 훨씬 작은 크기와 빠른 배포 가능
+
 <br/>
 
 ## 5. 도커 명령어
@@ -259,8 +283,8 @@ docker container log [options] <container-name>
 docker image pull [option] <image-name>[:tag]
 
 ex)
-# taegeun의 모든 이미지 다운로드
-docker image pull -a taegeun
+# 모든 이미지 다운로드
+docker image pull -a sonjungin
 
 # 로컬 Docker 이미지 목록 표시 (옵션 및 레포지토리 필터링 가능)
 docker image ls [option] [repository]
@@ -291,3 +315,9 @@ https://www.docker.com/resources/what-container/
 https://aws.amazon.com/what-is/virtualization/
 
 https://www.cloud4u.com/blog/how-virtualization-works/
+
+https://junhyunny.github.io/information/docker/docker-file-build-and-image-layer
+
+https://www.linkedin.com/pulse/understanding-docker-layers-efficient-image-building-majid-sheikh/
+
+https://kimjingo.tistory.com/62#google_vignette

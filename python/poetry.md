@@ -60,6 +60,7 @@ poetry config <키> <값>  # 설정 값 변경
 
 ```sh
 poetry install   # 의존성을 설치하고 가상환경 생성
+poetry self add poetry-plugin-shell # shell 플러그인 설치
 poetry shell     # 가상환경 활성화
 poetry env use <python 경로>  # 특정 Python 버전 사용
 ```
@@ -186,3 +187,5 @@ https://teddylee777.github.io/poetry/poetry-tutorial/
 https://devspoon.tistory.com/179
 
 https://geunuk.tistory.com/475
+
+https://github.com/python-poetry/poetry-plugin-shell
